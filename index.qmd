@@ -1,8 +1,8 @@
 ---
-title: "jeswheel.github.io"
+title: "Jesse Wheeler"
 ---
 
-This is a Quarto website.
+This is my academic website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
