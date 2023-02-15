@@ -1,0 +1,239 @@
+\documentclass[11pt] {article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}   
+\usepackage{sectsty}
+\usepackage{hyperref}
+
+% \parindent 0in
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\bf {Jesse Wheeler}}
+\lfoot{}
+\cfoot {\thepage}
+\rfoot{}
+\title{JesseWheelerCV}
+\author{jeswheel }
+\date{January 2023}
+
+\sectionfont{
+   \Large
+   \sectionrule{0pt}{0pt}{-4pt}{1.5pt}
+}
+
+\subsectionfont{
+   \noindent \hspace{1pt} \large
+}
+
+
+\newcommand {\myheader}[1]{{\bf {#1}}}
+
+\newenvironment {interests}
+                {
+                 \begin{list}{}
+                 {\setlength{\labelwidth}{0mm}
+                  %\setlength{\leftmargin}{0em}
+                  \setlength{\leftmargin}{8mm}
+                  \setlength{\itemindent}{-3mm}
+                  \setlength{\labelsep}{0mm}
+                  \setlength{\parsep}{0.1 ex}
+%                  \setlength{\itemsep}{0.25 cm}
+%                  \setlength{\itemsep}{0.23 cm}
+                  \setlength{\itemsep}{1pt}
+      \setlength{\topsep}{0.15cm}}} %space between title and 1st item
+   {\end{list}}
+
+\newenvironment {reflist}
+                {
+                 \begin{list}{}
+                 {\setlength{\labelwidth}{0mm}
+                  %\setlength{\leftmargin}{0em}
+                  \setlength{\leftmargin}{8mm}
+                  \setlength{\itemindent}{-3mm}
+                  \setlength{\labelsep}{0mm}
+                  \setlength{\parsep}{0.1 ex}
+%                  \setlength{\itemsep}{0.25 cm}
+%                  \setlength{\itemsep}{0.23 cm}
+                  \setlength{\itemsep}{0.1cm}
+      \setlength{\topsep}{0.15cm}}} %space between title and 1st item
+   {\end{list}}
+
+\newenvironment {teachinglsit}
+                {
+                 \begin{list}{}
+                 {\setlength{\labelwidth}{0mm}
+                  %\setlength{\leftmargin}{0em}
+                  \setlength{\leftmargin}{5mm}
+                  % \setlength{\itemindent}{0mm}
+                  \setlength{\labelsep}{0mm}
+                  \setlength{\parsep}{0.1 ex}
+%                  \setlength{\itemsep}{0.25 cm}
+%                  \setlength{\itemsep}{0.23 cm}
+                  \setlength{\itemsep}{1pt}
+      \setlength{\topsep}{0.15cm}}} %space between title and 1st item
+   {\end{list}}
+
+% % education entry
+% \newcommand{\education}[4]{
+
+% % name of the studies
+%   \noindent  \textbf{#1}
+%   % at the right the duration
+%     \hfill 
+%     \framebox{% duration inside a frame box
+%     \parbox{6em}{%
+%     \centering\textbf{#2}}} \par
+%  % new paragraph with the school in italics
+%      \noindent \textit{#3} \par
+%      % description with no hanging and in smaller text
+%      \vspace*{0.5em}
+%      \noindent\hangindent=2em\hangafter=0 \small #4 
+% %back to normal size
+% \normalsize \par}
+
+\begin{document}
+
+\thispagestyle{empty}  % No number or header on 1st page
+
+\rule{0mm}{1mm}
+\vspace{-20mm}
+
+%\hfill{\small \today} 
+
+\vspace{1mm}
+
+%\begin{center}
+%\hfill 
+\rule{0mm}{1mm}\hspace{5cm}{\large {\bf JESSE WHEELER}}
+%\hfill 
+%\end{center}
+%\vspace{1mm}
+
+%\vspace{1mm}
+
+\begin{tabbing}
+University of Michiganxxxxxxxxxxxxxxxxxxxxxxxxxx\= \kill
+Department of Statistics \>  % phone: (734) 615-3332
+Email: {jeswheel@umich.edu}
+\\
+University of Michigan\> % fax: (734) 763-4676
+{}
+\\
+Ann Arbor MI 48109-1107 \> 
+\end{tabbing}
+
+\section*{Education}
+
+{\bf PhD in Statatistics} \hfill {\textit{2020-Present}}
+
+Univeristy of Michigan, Ann Arbor, MI.
+
+Thesis Advisor: Edward Ionides
+
+\noindent{\bf B.S. in Mathematics, Statistics, Minor in Computer Science } \hfill  {\textit{2016-2020}}
+
+Utah State University (USU), Logan, UT.
+
+Graduated Summa cum laude as valedictorian of the College of Science, class of 2020
+
+\section*{Research}
+\subsection*{Interests} 
+\begin{interests}
+    \item Time Series Analysis via Mechanistic Models
+    \item Computational Statistics 
+    \item Reproducible and Robust Statistics 
+    \item Applications in infectious disease modeling. 
+\end{interests}
+\subsection*{Peer Reviewed Publications}
+
+\begin{reflist}
+
+    \item Wheeler, J., Rosengart, A., Jiang, Z., Tan, K., Truetle, N., Ionides, E. (2023) Informing policy via dynamic models: Cholera in Haiti. {\it Annals of applied statistics}. \url{https://arxiv.org/abs/2301.08979} \textbf{Submitted.} 
+
+    \item Wagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. (2023) Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States. {\it Journal of Structural Engineering}, \textbf{Submitted}.
+  
+    \item Ionides, E. L., Ning, N. and Wheeler, J. (2022). An iterated block particle filter for inference on coupled dynamic systems with shared and unit-specific parameters. {\it Statistica Sinica}, \textbf{accepted}.
+
+    \item Wheeler, J., Bean, B., Maguire, M. (2022). Creating a Universal Depth-to-Load Conversion Technique for the Conterminous United States Using Random Forests. {\it Journal of Cold Regions Engineering, 36(1), 04021019}. doi:10.1061/(ASCE)CR.1943-5495.0000270
+
+    \item Bean, B., Maguire, M., Sun, Y., Wagstaff, J., Al-Rubaye, S., Wheeler, J., Jarman, S., Rogers, M. (2021). The 2020 National Snow Load Study. {\it Utah State University}.
+
+    \item White, T., Wheeler, J., Lindstrom, C., Christensen, R., Moon, K. (2021). GPS-Denied Navigation Using SAR Images and Neural Networks. {\it ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}. Toronto, ON, Canada, 2021, pp. 2395-2399, doi:10.1109/ICASSP39728.2021.9414421.
+    
+\end{reflist}
+
+\subsection*{Conference Presentations}
+
+\begin{reflist}
+
+    \item Wheeler, J., Rosengart, A., Jiang, Z., Tan, K., Treutle, N., Ionides., E. (2023). Informing Policy Via Dynamic Models: Cholera in Haiti. Contributed Paper. {\it Bayes Comp 2023, Satellite Event: Bayesian Inference of Epidemics, Levi, Finland}. \textbf{Upcoming, March 2023.}
+
+    \item Wheeler, J., Rosengart, A., Jiang, J., Ionides, E. (2022). Eliminating Cholera in Haiti: Combining Dynamic Models with Data to Inform Vaccination Policy. Contributed Paper. {\it JSM 2020, Washington D.C.}. 
+
+    \item Wheeler, J., Bean, B. (2020). Estimating Snow Water Equivalence Using Easily Obtainable Climate Variables. USU Student Research Symposium. 
+
+    \item Wheeler, J., Lindstrom, C., Christensen, R., Moon, K. (2020). Poster: GPS-Denied Navigation Using SAR Images and Neural Networks. {\it Utah Conference on Undergraduate Research, Logan, UT}.
+
+    \item Christensen, D., Villanueva, I., Wheeler, J., Vicioso, P., Husman, J., Lampkins, S., Youmans, K. (2019). Exploring Potential Relationships Between Self-Efficacy, Performance, and Electrodermal Activity in Engineering Exams. {\it American Educational Research Association.} April 5-9. Toronto, Canada. 
+    
+\end{reflist}
+
+\subsection*{Awards}
+
+\noindent\hspace{5mm}\textbf{Honorable Mention} NSF GRFP \hfill {\textit{2022}}
+
+\vspace{2mm}
+\noindent\hspace{5mm}\textbf{Rackham Merit Fellowship}, University of Michigan \hfill {\textit{2020-2025}}
+
+\vspace{2mm}
+\noindent\hspace{5mm}\textbf{URCO Grant}, USU \hfill  {\textit{2020}}
+
+\noindent\hspace{5mm}{\it Award amount: $\$1000$}
+
+\subsection*{Other}
+
+
+\section*{Teaching}
+
+\noindent \textbf{University of Michigan} \hfill  {\textit{2022-2023}}
+
+\begin{teachinglsit}
+    \item Stats 306, {\it Lab Instructor} (Introduction to Statistical Computing)
+
+    \item Tutor for masters level courses in probability and regression
+\end{teachinglsit}
+
+\vspace{2mm}
+\noindent \textbf{SISMID (2022)}. Instructor for a short course on {\it Simulation based inference for Epidemiological Dynamics} at the Summer Institute in Statistics Modeling in Infectious Diseases (SISMID). University of Washington.
+
+\vspace{2mm}
+\noindent \textbf{Utah State University} \hfill  {\textit{2017-2020}}
+
+\begin{teachinglsit}
+    \item Math 0995, {\it Recitation Leader} (Remedial Algebra)
+    \item Math 1210, {\it Recitation Leader} (Introductory Calculus)
+    \item Math 1220 {\it Recitation Leader} (Calculus II, sequences and series)
+    \item Stats 1040, {\it Recitation Leader}, (Introductory Statistics, non-Calculus based)
+\end{teachinglsit}
+
+\subsection*{Mentoring}
+
+\noindent\hspace{5mm}Undergraduate projects and thesis: Kevin Tan (2022), Noah Treutle (2022) and Bo Yang (Present). 
+
+\subsection*{Awards}
+
+\hspace{5mm}\textbf{Outstanding Undergraduate Recitation Leader} \hfill  {\textit{2019}}
+
+\noindent\hspace{5mm}{\it USU Mathematics and Statistics Department}
+
+\section*{Service}
+\noindent \textbf{Computing Club Committee Member, UM Statistics Department} \hfill  {\textit{2022-Present}}
+
+\vspace{2mm}
+\noindent \textbf{Peer Review}: PLoS computation biology \hfill {\it 2021}
+
+\vspace{2mm}
+\noindent \textbf{President, USU Data Science Club} \hfill  {\textit{2019-2020}}
+
+\end{document}
