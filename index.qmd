@@ -9,6 +9,11 @@ about:
     - text: GitHub
       href: https://github.com/jeswheel
       icon: "github"
+  image-width: 10em
+theme: 
+  light: darkly
+  dark: cerulean
+css: custom.scss
 ---
 
 I am a 3rd year PhD student in the Statistics Department at the University of Michigan.
@@ -50,7 +55,7 @@ selected_papers <- papers %>% filter(!is.na(PRIORITY) & PRIORITY == 1)
 \indent
 
 ```{r echo=FALSE, results='asis'}
-out <- "<p style=\"padding-left: 22px; text-indent:-22px;\">" 
+out <- "<div class=\"myrefs\">\n" 
 for (i in 1:nrow(selected_papers)) {
   authors <- unlist(selected_papers[[i, 'AUTHOR']])
   authors_split <- strsplit(authors, ",")
@@ -69,20 +74,24 @@ for (i in 1:nrow(selected_papers)) {
   Working <- selected_papers[[i, "WORKING"]]
   Year <- gsub("noop\\{\\d+\\}", "", selected_papers[[i, 'YEAR']])
   Year <- gsub("[[:alpha:]]|[[:punct:]]|\\s", "", Year)
-   
   
-  out <- paste0(
-    out, 
-    out_name, " ", 
+  entry <- paste0(
+    "<p>", out_name, " ", 
     ifelse(!is.na(Working), paste0("**", Working, "**. "), ""),
     Year, 
     ". \"",
     gsub("\\{|\\}", "", selected_papers[[i, "TITLE"]]), "\". ",
     "*", 
-    gsub("noop\\{\\d+\\}", "", selected_papers[[i, "JOURNAL"]]), "*. \n\n"
+    gsub("noop\\{\\d+\\}", "", selected_papers[[i, "JOURNAL"]]),
+    "*.</p>"
+  )
+  
+  out <- paste0(
+    out, 
+    entry, "\n"
     )
 }
-out <- paste0(out, "</p>")
+out <- paste0(out, "</div>")
 cat(out)
 ```
 

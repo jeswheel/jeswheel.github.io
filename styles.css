@@ -1,1 +1,5 @@
 /* css styles */
+div.myrefs {
+  padding-left: 22px;
+  text-indent: -22px;
+}
