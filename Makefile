@@ -1,4 +1,4 @@
-build: index.qmd about.qmd styles.css cv.pdf researchStatement.pdf
+build: index.qmd about.qmd styles.css texDocs/cv.tex texDocs/researchStatement.tex
 	quarto publish gh-pages --no-prompt
 
 # %.pdf: texDocs/%.tex texDocs/myWorks.bib
@@ -8,11 +8,11 @@ build: index.qmd about.qmd styles.css cv.pdf researchStatement.pdf
 # 	pdflatex -output-directory=texDocs texDocs/$*
 # 	rm -f texDocs/$*.aux texDocs/$*.log texDocs/$*.bbl texDocs/$*.blg texDocs/$*.out
 
-cv.pdf: texDocs/cv.tex
+texDocs/cv.tex:
 	pdflatex -output-directory=texDocs texDocs/cv
 	rm -f texDocs/cv.aux texDocs/cv.log texDocs/cv.bbl texDocs/cv.blg texDocs/cv.out
 
-researchStatement.pdf: texDocs/researchStatement.tex texDocs/myWorks.bib
+texDocs/researchStatement.tex: | texDocs/myWorks.bib
 	pdflatex -output-directory=texDocs texDocs/researchStatement
 	TEXMFOUTPUT="texDocs:" bibtex texDocs/researchStatement
 	pdflatex -output-directory=texDocs texDocs/researchStatement
