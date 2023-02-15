@@ -2,10 +2,22 @@
 title: "Jesse Wheeler"
 ---
 
-This is my academic website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I am a 3rd year PhD student in the Statistics Department at the University of Michigan.
+I research likelihood based methods for partially observed Markov process models.
+I primarily work on methodology, software and applications of these models to infectious disease outbreaks, but I am also currently working on developing theoretical properties of some algorithms that have been developed by our research group. 
+We are currently working on extending the state-of-the art in this field by expanding the scope of these models to the case when data are collected on a moderate sized spatial network.
+One of my goals, for example, would be to increase the set of tools available to researchers who might want to gain an understanding of how recorded cases of an infectious disease in one spatial region might be related to those in neighboring region. 
+My thesis advisor is [Edward Ionides](https://ionides.github.io/). 
 
 ```{r}
 1 + 1
 ```
+
+[My CV](texDocs/cv.pdf)
+
+[Research Statement](texDocs/researchStatement.pdf)
+
+This website was created using Quarto. 
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+
