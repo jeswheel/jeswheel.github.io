@@ -1,21 +1,92 @@
 ---
 title: "Jesse Wheeler"
+image: portait.jpeg
+about: 
+  template: solana 
+  links: 
+    - text: ORCiD
+      href: https://orcid.org/0000-0003-3941-3884
+    - text: GitHub
+      href: https://github.com/jeswheel
+      icon: "github"
 ---
 
 I am a 3rd year PhD student in the Statistics Department at the University of Michigan.
 I research likelihood based methods for partially observed Markov process models.
-I primarily work on methodology, software and applications of these models to infectious disease outbreaks, but I am also currently working on developing theoretical properties of some algorithms that have been developed by our research group. 
-We are currently working on extending the state-of-the art in this field by expanding the scope of these models to the case when data are collected on a moderate sized spatial network.
-One of my goals, for example, would be to increase the set of tools available to researchers who might want to gain an understanding of how recorded cases of an infectious disease in one spatial region might be related to those in neighboring region. 
-My thesis advisor is [Edward Ionides](https://ionides.github.io/). 
+I primarily work on methodology, software and applications of these models to infectious disease outbreaks, but I am also currently working on developing theoretical properties of some algorithms that I have previously helped develop. 
+<!-- We are currently working on extending the state-of-the art in this field by expanding the scope of these models to the case when data are collected on a moderate sized spatial network. -->
+<!-- One of my goals, for example, would be to increase the set of tools available to researchers who might want to gain an understanding of how recorded cases of an infectious disease in one spatial region might be related to those in neighboring region.  -->
+<!-- My thesis advisor is [Edward Ionides](https://ionides.github.io/).  -->
 
-```{r}
-1 + 1
+---
+
+## Education
+
+University of Michigan | Ann Arbor, MI
+PhD in Statistics | August 2020 - Current
+
+Utah State University | Logan, UT
+B.S. in Mathematics and Statistics | August 2016 - May 2020
+
+---
+
+## Selected Papers
+
+*Note:* The website is currently in development stages, so the selected papers below may not be up-to-date or accurate.  
+
+```{r echo=FALSE, message=FALSE, include=FALSE, warning=FALSE}
+library(bib2df)
+library(tidyverse)
+papers <- bib2df('texDocs/myWorks.bib')
+selected_papers <- papers %>% filter(!is.na(PRIORITY) & PRIORITY == 1)
+# selected_papers$BIBTEXKEY <- paste0("sp", 1:nrow(selected_papers))
+# df2bib(selected_papers, file = 'texDocs/selectedPapers.bib')
 ```
 
-[My CV](texDocs/cv.pdf)
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\indent
 
-[Research Statement](texDocs/researchStatement.pdf)
+```{r echo=FALSE, results='asis'}
+out <- "<p style=\"padding-left: 22px; text-indent:-22px;\">" 
+for (i in 1:nrow(selected_papers)) {
+  authors <- unlist(selected_papers[[i, 'AUTHOR']])
+  authors_split <- strsplit(authors, ",")
+  
+  lasts <- unlist(lapply(authors_split, function(x) x[1]))
+  firsts <- gsub("^\\s", "", unlist(lapply(authors_split, function(x) x[2])))
+  first_initials <- str_extract_all(firsts, "\\b(\\w)")
+  first_initials <- unlist(lapply(first_initials, function(x) paste0(paste0(x, collapse = ". "), ".")))
+  
+  if (length(lasts) >= 6) {
+    out_name <- paste0(lasts[1], ", ", first_initials[1], ", et al.")
+  } else {
+    out_name <- paste(lasts, first_initials, sep = ', ', collapse = ', ')
+  }
+  
+  Working <- selected_papers[[i, "WORKING"]]
+  Year <- gsub("noop\\{\\d+\\}", "", selected_papers[[i, 'YEAR']])
+  Year <- gsub("[[:alpha:]]|[[:punct:]]|\\s", "", Year)
+   
+  
+  out <- paste0(
+    out, 
+    out_name, " ", 
+    ifelse(!is.na(Working), paste0("**", Working, "**. "), ""),
+    Year, 
+    ". \"",
+    gsub("\\{|\\}", "", selected_papers[[i, "TITLE"]]), "\". ",
+    "*", 
+    gsub("noop\\{\\d+\\}", "", selected_papers[[i, "JOURNAL"]]), "*. \n\n"
+    )
+}
+out <- paste0(out, "</p>")
+cat(out)
+```
+
+---
 
 This website was created using Quarto. 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
