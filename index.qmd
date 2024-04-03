@@ -16,7 +16,7 @@ theme:
 css: custom.scss
 ---
 
-I am a 3rd year PhD student in the Statistics Department at the University of Michigan.
+I am a 4th year PhD student in the Statistics Department at the University of Michigan.
 I research likelihood based methods for partially observed Markov process models.
 I primarily work on methodology, software and applications of these models to infectious disease outbreaks, but I am also currently working on developing theoretical properties of some algorithms that I have previously helped develop. 
 <!-- We are currently working on extending the state-of-the art in this field by expanding the scope of these models to the case when data are collected on a moderate sized spatial network. -->
@@ -36,8 +36,6 @@ B.S. in Mathematics and Statistics | August 2016 - May 2020
 ---
 
 ## Selected Papers
-
-*Note:* The website is currently in development stages, so the selected papers below may not be up-to-date or accurate.  
 
 ```{r echo=FALSE, message=FALSE, include=FALSE, warning=FALSE}
 library(bib2df)
@@ -83,7 +81,8 @@ for (i in 1:nrow(selected_papers)) {
     gsub("\\{|\\}", "", selected_papers[[i, "TITLE"]]), "\". ",
     "*", 
     gsub("noop\\{\\d+\\}", "", selected_papers[[i, "JOURNAL"]]),
-    "*.</p>"
+    "*.", 
+    ifelse(is.na(selected_papers[[i, "DOI"]]), "</p>", paste0(" ", selected_papers[[i, "DOI"]], ".</p>"))
   )
   
   out <- paste0(
@@ -94,6 +93,11 @@ for (i in 1:nrow(selected_papers)) {
 out <- paste0(out, "</div>")
 cat(out)
 ```
+
+## Software 
+
+- [`Arima2`](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
+- [`panelPomp`](https://jeswheel.github.io/panelPomp): This `R` package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am not the creator of this package, but I am one of the primary contributors and maintainers of this package. 
 
 ---
 
