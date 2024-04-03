@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Jesse Wheeler",
@@ -18,7 +25,7 @@
     "href": "index.html#selected-papers",
     "title": "Jesse Wheeler",
     "section": "Selected Papers",
-    "text": "Selected Papers\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2022. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica. pre-published online. 10.48550/ARXIV.2206.03837.\n\n\nWheeler, J., Ionides, E. L. 2023. “Likelihood Based Inference of ARMA Models”. ArXiv preprint. arXiv.2310.01198.\n\n\nWheeler, J., Ionides, E. L. Working Paper. . “Block Panel Iterated Filtering for Unit-Specific Parameters”. TBD.\n\n\nWheeler, J., et al. 2023. “Informing Policy via Dynamic Models: Cholera in Haiti”. ArXiv preprint. arXiv:2301.08979.\n\n\nWagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States”. Journal of Structural Engineering."
+    "text": "Selected Papers\n\n\nWheeler, J., et al. 2024. “Informing Policy via Dynamic Models: Cholera in Haiti”. Accepted at PLoS Computational Biology. arXiv:2301.08979.\n\n\nWagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States”. Journal of Structural Engineering.\n\n\nWheeler, J., Ionides, E. L. 2023. “Likelihood Based Inference of ARMA Models”. ArXiv preprint. arXiv.2310.01198.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2022. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica. pre-published online. 10.48550/ARXIV.2206.03837.\n\n\nWheeler, J., Bean, B., Maguire, M. 2022. “Creating a universal depth-to-load conversion technique for the conterminous United States using random forests”. Journal of Cold Regions Engineering."
   },
   {
     "objectID": "index.html#software",
@@ -26,12 +33,5 @@
     "title": "Jesse Wheeler",
     "section": "Software",
     "text": "Software\n\nArima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. I am not the creator of this package, but I am one of the primary contributors and maintainers of this package.\n\n\nThis website was created using Quarto. To learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]
