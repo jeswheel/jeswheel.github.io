@@ -32,6 +32,6 @@
     "href": "index.html#software",
     "title": "Jesse Wheeler",
     "section": "Software",
-    "text": "Software\n\nArima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. I am not the creator of this package, but I am one of the primary contributors and maintainers of this package.\n\n\nThis website was created using Quarto. To learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. I am not the creator of this package, but I am one of the primary contributors and maintainers of this package.\n\n\nThis website was created using Quarto. To learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]
