@@ -11,6 +11,8 @@ website:
         text: CV
       - href: texDocs/researchStatement.pdf
         text: Research Statement
+      - href: panelPomp
+        text: Panel Pomp
       # - about.qmd
 
 format:
