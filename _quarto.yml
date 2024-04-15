@@ -12,7 +12,7 @@ website:
       - href: texDocs/researchStatement.pdf
         text: Research Statement
       - href: panelPomp
-        text: Panel Pomp
+        text: PanelPomp
       # - about.qmd
 
 format:
