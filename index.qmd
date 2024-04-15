@@ -10,9 +10,6 @@ about:
       href: https://github.com/jeswheel
       icon: "github"
   image-width: 10em
-theme: 
-  light: darkly
-  dark: cerulean
 css: custom.scss
 ---
 
@@ -96,8 +93,8 @@ cat(out)
 
 ## Software 
 
-- [`Arima2`](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
-- [`panelPomp`](https://jeswheel.github.io/panelPomp): This `R` package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am not the creator of this package, but I am one of the primary contributors and maintainers of this package. 
+- [arima2](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
+- [panelPomp](https://jeswheel.github.io/panelPomp): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am not the creator of this package, but I am one of the primary contributors and maintainers of this package. 
 
 ---
 
