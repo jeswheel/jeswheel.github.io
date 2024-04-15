@@ -1,6 +1,8 @@
-build: index.qmd about.qmd styles.css texDocs/cv.tex texDocs/researchStatement.tex
-	if ! [ -d "texDocs/cv.pdf"]; then rm texDocs/cv.pdf; fi
-	if ! [ -d "texDocs/researchStatement.pdf"]; then
+TEXDOCS:= {cv,researchStatement}
+
+build: index.qmd about.qmd styles.css texDocs/cv.tex texDocs/researchStatement.tex texDocs/myWorks.bib
+	if [ -a texDocs/cv.pdf]; then rm texDocs/cv.pdf; fi
+	if [ -a texDocs/researchStatement.pdf]; then rm texDocs/researchStatement.pdf; fi
 	$(MAKE) texdocs
 	quarto publish gh-pages --no-prompt
 
@@ -12,7 +14,7 @@ build: index.qmd about.qmd styles.css texDocs/cv.tex texDocs/researchStatement.t
 # 	rm -f texDocs/$*.aux texDocs/$*.log texDocs/$*.bbl texDocs/$*.blg texDocs/$*.out
 
 texdocs:
-	for f in $(TEXDOCS); do (make texDocs/$$f.pdf -B); done
+	for f in $(TEXDOCS); do ($(MAKE) texDocs/$$f.pdf); done
 
 # texDocs/%.pdf: texDocs/%.tex texDocs/myWorks.bib
 # 	pdflatex -output-directory=texDocs texDocs/$*
@@ -22,12 +24,9 @@ texdocs:
 # 	rm -f texDocs/$*.aux texDocs/$*.log texDocs/$*.bbl texDocs/$*.blg texDocs/$*.out
 
 texDocs/cv.pdf: texDocs/cv.tex
-	pdflatex -output-directory=texDocs texDocs/cv
+	(cd texDocs; pdflatex cv)
 	rm -f texDocs/cv.aux texDocs/cv.log texDocs/cv.bbl texDocs/cv.blg texDocs/cv.out
 
-texDocs/researchStatement.pdf: | texDocs/myWorks.bib texDocs/researchStatement.tex
-	pdflatex -output-directory=texDocs texDocs/researchStatement
-	TEXMFOUTPUT="texDocs:" bibtex texDocs/researchStatement
-	pdflatex -output-directory=texDocs texDocs/researchStatement
-	pdflatex -output-directory=texDocs texDocs/researchStatement
+texDocs/researchStatement.pdf: texDocs/myWorks.bib texDocs/researchStatement.tex
+	(cd texDocs; pdflatex researchStatement; bibtex researchStatement; pdflatex researchStatement; pdflatex researchStatement)
 	rm -f texDocs/researchStatement.aux texDocs/researchStatement.log texDocs/researchStatement.bbl texDocs/researchStatement.blg texDocs/researchStatement.out
