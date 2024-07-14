@@ -4,3 +4,5 @@
 .Rproj.user
 /docs/
 .DS_Store
+texDocs/*.log
+texDocs/*.synctex.gz

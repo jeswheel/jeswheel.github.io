@@ -24,47 +24,72 @@
 
 \vspace{4mm}
 
-Dynamic systems are the subject of many ecological and financial studies.
-Recent advances in the collection and storing of data have lead to an abundance of measurements taken on dynamic systems that may evolve over time and space.
-Such datasets often exhibit spatial-temporal dependence between observations that render many traditional statistical models useless.
-A modern approach to modeling these data is the use of state-space models, which involve the proposal mathematical equations that describe how unobservable states of the system evolve over time and how measurements of the system variables are obtained.
-The use of state-space models is appealing because researchers may include mechanisms in the model that reflect our current scientific understanding of the system;
-this enables researchers to estimate the effect a potential intervention may have on a system, provides a framework to perform statistical testing of our current understanding against alternative explanations, and make inference on unobservable variables that may be scientifically interesting.
+% \noindent Dynamic systems are the subject of many ecological and financial studies.
+\noindent Recent advancements in data collection and storage have led to an abundance of complex datasets.
+Often, these datasets include time-dependent measurements, resulting in interdependent observations that render many traditional statistical modeling approaches ineffective.
+This issue is particularly prevalent in nonlinear dynamic systems that are frequently of scientific or industrial interest.
 
-Despite the utility of these models, statistical inference of a dynamic system using state-space models remains a challenging task.
-The primary goal of my current research is to expand the current state-of-the-art for state-space modeling. In particular, I develop methodology, theory, and software for likelihood based inference of state-space models with the {\it plug-and-play} property, which is that one only needs the ability to simulate from the model in order to perform inference.
-While these methods have a variety of applications, most published articles using this class of algorithms are found in the field of Epidemiology, including my own applied research.
+A modern approach to modeling time-dependent observations is the use of state-space (or mechanistic) models \cite{durbin12}.
+These models involve proposing mathematical equations that describe how unobservable states of the system evolve over time and how measurements of the system variables are obtained.
+State-space models are appealing because they allow researchers to incorporate mechanisms that reflect our current scientific understanding of the system.
+This capability enables researchers to estimate the effects of potential interventions on the system, provides a framework for statistical testing of our current understanding against alternative explanations, and facilitates inference on unobservable variables that may be of scientific interest.
+
+Despite the utility of these models, statistical inference of a dynamic system using state-space models remains a challenging task \cite{auger16}.
+The primary goal of my current research is to expand the current state-of-the-art for state-space modeling.
+In particular, I develop methodology, theory, and software for likelihood based inference of state-space models with the {\it plug-and-play} property, which is that one only needs the ability to simulate from the model in order to perform inference \cite{breto09}.
+Algorithms with the plug-and-play property allow researchers to fit models that are scientifically accurate rather than those that are statistically convinient \cite{wheeler24}.
+
+% An important outcome of this line of research is
+% State-space models are particularly useful in studying population Ecology.
+
+\section{State-space modeling in higher dimensions}\label{sec:methods}
+
+The nonlinear, stochastic nature of many dynamic systems of scientific interest make the state-space modeling approach challenging.
+Contemporary approaches that have been successfully used for nonlinear, low-dimensional systems are based on sequential Monte Carlo (SMC) techniques \cite{ionides06,andrieu10,ionides15}.
+As the dimensionality of the system increases, however, the approximation error of SMC increases exponentially \cite{bengtsson08,snyder08}.
+This necessitates the development of algorithms that can be used to perform inference on high-dimensional nonlinear state-space models.
+Recent progress in this area has been made (for instance, \cite{ionides22,wheeler24}), yet several open problems remain.
+Furthermore, existing plug-and-play algorithms used to model these systems are computationally expensive, making any improvements in computational speed a desireable outcome.
+% Recent research by my research group have enabled some progress in this area \cite{ionides22}.
+
+One simplifying assumption that can often be made for high-dimensional, nonlinear dynamic systems is approximate independence bewtween measurement units.
+Data collected from these systems are sometimes called panel or longitudinal data.
+Each time series in the panel may be relatively short, so that inference on an underlying model must combine information across the units.
+Differences between units may be of direct inferential interest or may be a nuisance for studying the commonalities.
+One example includes fitting parameters that are both shared across units in the panel and also those that are specific to each unit.
+Current state-of-the-art plug-and-play algorithms available for fitting models of this type of model treat panel state-space models similar to their lower-dimensional equivalents \cite{breto20}, and can therefore still suffer from particle depletion \cite{snyder08}, resulting in the need for expensive numerical calculations.
+
+One of my current research projects aims to reduce the computational burden associated with fitting state-space models to panel data.
+An algortihm I have designed, called the block panel iterated filter (BPIF), does this by accounting for the indepdenence between the likelihood of a given unit in a panel and the unit-specific parameters of other units.
+While the theory for this algorithm is still being developed, it has proven to be an improvement over existing approaches on simulated data and in some practical examples that have been attempted by undergraduate students I have mentored \cite{yang23,sun24}.
+
+One weakness of maximum likelihood estimation is that estimated parameters may not make sense in the context of the model and data in question \cite{lecam90}.
+For mechanistic models, this is particularly troublesome because estimated parameters should provide a quantitative description of the data while retaining a meaningful mechanistic interpretation \cite{wheeler24}.
+In high dimensional systems, the chance of finding parameters that maximize the likelihood in inplausible regions of the parameter space increases \cite{li24}.
+For this reason I plan on extending existing iterated filtering algorithms \cite{ionides15,ionides22} to enable the maximization of penalized likelihood \cite{cole13}, which helps address issues of parameter instability that arise in likelihood maximization.
+Additionally, penalized likelihood may enable the estimation of random effects in high-dimensional state-space models, an open research question.
+
+% \section{State-space modeling of infectious diseases}\label{sec:epi}
+
+% The ongoing global COVID-19 pandemic has sparked interest in the statistical modeling of infectious diseases.
+% State-space models are well-suited for epidemiological systems as researchers have long used partially observed dynamical models to describe the development of an infectious disease outbreak.
+% The methodological, theoretical, and computing developments mentioned in Sections \ref{sec:methods} and \ref{sec:software} provide epidemiologists with a new set of tools for modeling infectious disease outbreaks.
+% In \cite{wheeler24}, I provide practical advice on how to use these tools and avoid common mistakes that are made in infectious disease modeling.
+
+\section{Additional Research}
+
+State-space models have additional uses beyond the class of mechanistic models that are popular in Ecology.
+Likelihood maximization for auto regressive moving average (ARMA) models, for instance, is traditionally done by reparameterizing the model into an equivalent linear Gaussian state-space form \cite{gardner80, durbin12}.
+% In this case, the state-space model is a convinient approach to fitting a model rather than being of direct interest itself.
+Despite the wide use of ARMA models across various scientific disciplines, current algorithms for maximum likelihood estimation of ARMA models have weaknesses that are not well known.
+In one of my working papers, I demonstrate how existing optimization strategies for ARMA models often result in parameter estimates corresponding to local---rather than global---maxima of the likelihood surface.
+To rectify this, I propose a random restart algorithm that frequently results in higher likelihoods than standard alternative \cite{wheelerARMA}.
 
 While my current research is focused on state-space modeling of dynamic systems, I am interested in many other statistical topics and am open to new research topics and collaborations.
 Some themes common to each of my research interests are transparency, reproducibility and simplicity.
 I believe that many of the challenges faced by various scientific disciplines are a direct result of the poor practice of these three principles.
 I also believe that statisticians must play a more active role in promoting and executing these principles.
 As such, one of my primary research goals is to positively impact the scientific community by writing papers and developing software that encourage and enable other researchers to incorporate these principles in their own work.
-An example of how my current work relates to these principles is my contribution to likelihood based inference for auto-regressive, moving-average time series models \cite{wheeler2023-a}.
-In this work I show how current software implementations of the maximum likelihood estimation routine for ARMA models may result in sub-optimal parameter estimates and other misleading results; I then describe an approach to obtain better parameter estimates for these models, and provide a detailed description of the implemented algorithm in order to facilitate reproducibility and transparency.
-
-\section{State-space modeling in higher dimensions}\label{sec:methods}
-
-The complex, non-linear nature of many dynamic systems of scientific interest make the state-space modeling approach a challenging task.
-Contemporary approaches that have been successfully used for non-linear, low-dimensional systems are based on sequential Monte Carlo (SMC) techniques.
-As the dimensionality of the system increases, however, the approximation error of SMC increases exponentially.
-This necessitates the development of algorithms that can be used to perform inference on high-dimensional non-linear state-space models.
-Recent research by my research group have enabled some progress in this area \cite{ionides22}.
-
-One simplifying assumption that enables likelihood based inference for high-dimensional, non-linear state-space models is that of approximate independence between spatial units.
-I am currently developing an algorithm called Block Panel Iterated Filter (BPIF) that will extend the current state-of-the-art for this class of models under this assumption \cite{wheeler2023-b}.
-
-The algorithms described in \cite{ionides22} and \cite{wheeler2023-b} enable the estimation of both system wide (or shared) parameters and unit-specific parameters.
-% Just as extending linear regression models to include random effects
-My future work in this area includes the natural extension of \cite{ionides22} and \cite{wheeler2023-b} to include the ability of estimating random effects for these classes of models.
-
-
-\section{State-space modeling of infectious diseases}\label{sec:epi}
-
-The ongoing global COVID-19 pandemic has sparked interest in the statistical modeling of infectious diseases.
-State-space models are well-suited for epidemiological systems as researchers have long used partially observed dynamical models to describe the development of an infectious disease outbreak.
-The methodological, theoretical, and computing developments mentioned in Sections \ref{sec:methods} and \ref{sec:software} provide epidemiologists with a new set of tools for modeling infectious disease outbreaks.
-In \cite{wheeler24}, I provide practical advice on how to use these tools and avoid common mistakes that are made in infectious disease modeling.
 
 \section{Software}\label{sec:software}
 
@@ -72,16 +97,23 @@ The development of theory and methods for likelihood based inference of state-sp
 This section briefly describes some of the open-source software packages to which I have contributed.
 
 \begin{itemize}
-    \item \texttt{arima2}: This package provides useful functions for fitting auto-regressive, integrated, moving-average (ARIMA) models in \texttt{R}. The most important function of this package is the \texttt{arima} function, which fits ARIMA models using a multiple restart algorithm that results in models with higher likelihoods than the \texttt{arima} function of the \texttt{stats} package.
-    I am the creator and primary contributor of this package, which is used and described in \cite{wheeler2023-a}.
-    \item \texttt{spatPomp}: This package provides a framework for developing spatiotemporal partially observed Markov process (SpatPOMP) models for data analysis. An implementation of the method described in \cite{ionides22} is found in this package.
-    My contributions to this package include the implementation of new package features, as well as some bug fixes.
+    \item \texttt{panelPomp}: This package provides a framework for developing high-dimensional state-space models under the assumption of independence between panel units.
+    This package is publically available on both CRAN and GitHub.
+    While I was not the original creator of the package, I am currently the primary package maintainer and developer.
 
-    \item \texttt{pomp}: This widely used package provides a framework for developing partially observed Markov process (POMP) models; the \texttt{spatPomp} package described previously is an extension of this package.
-    My contributions to this package are bug fixes.
+    \item \texttt{arima2}: This package provides useful functions for fitting auto-regressive, integrated, moving-average (ARIMA) models in \texttt{R}. The most important function of this package is the \texttt{arima} function, which fits ARIMA models using a multiple restart algorithm that frequently results in models with higher likelihoods than other alternatives \cite{wheelerARMA}.
+    I am the creator and primary contributor of this package, which is publically available on both CRAN and GitHub.
+
+    \item \texttt{pomp} and \texttt{spatPomp}: These are both popular packages that enable inference for mechanistic models. The \texttt{pomp} package in particular is used by thousands of researchers across a variety of disciplines. I am an active contributor to both of these open source projects.
+
+    % \item \texttt{spatPomp}: This package provides a framework for developing spatiotemporal partially observed Markov process (SpatPOMP) models for data analysis. An implementation of the method described in \cite{ionides22} is found in this package.
+    % My contributions to this package include the implementation of new package features, as well as some bug fixes.
+
+    % \item \texttt{pomp}: This widely used package provides a framework for developing partially observed Markov process (POMP) models; the \texttt{spatPomp} package described previously is an extension of this package.
+    % My contributions to this package are bug fixes.
 \end{itemize}
 
-\bibliography{myWorks.bib}
+\bibliography{myWorks.bib,otherWorks.bib}
 \bibliographystyle{ieeetr}
 
 \end{document}
