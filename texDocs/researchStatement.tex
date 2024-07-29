@@ -30,7 +30,7 @@ Often, these datasets include time-dependent measurements, resulting in interdep
 This issue is particularly prevalent in nonlinear dynamic systems that are frequently of scientific or industrial interest.
 
 A modern approach to modeling time-dependent observations is the use of state-space (or mechanistic) models \cite{durbin12}.
-These models involve proposing mathematical equations that describe how unobservable states of the system evolve over time and how measurements of the system variables are obtained.
+These models require the proposal of mathematical equations that describe how unobservable states of the system evolve over time and how measurements of the system variables are obtained.
 State-space models are appealing because they allow researchers to incorporate mechanisms that reflect our current scientific understanding of the system in question.
 This capability enables researchers to estimate the effects of potential interventions on the system, provides a framework for statistical testing of our current understanding against alternative explanations, and facilitates inference on unobservable variables that may be of scientific interest.
 
@@ -39,10 +39,10 @@ The primary goal of my current research is to expand the current state-of-the-ar
 In particular, I develop methodology, theory, and software for likelihood based inference of state-space models with the {\it plug-and-play} property, which is that one only needs the ability to simulate from the model in order to perform inference \cite{breto09}.
 Algorithms with the plug-and-play property enable researchers to fit models that align with their scientific objectives instead of being limited to those that are statistically convenient \cite{wheeler24}.
 
-This line of research frequently requires close collaboration with experts from pertinent scientific disciplines.
+Applying state-space models to data requires close collaboration with experts from pertinent scientific disciplines.
 For example, conducting a statistical analysis of an infectious disease outbreak relies heavily on expert opinion regarding the specific disease \cite{wheeler24}.
 A pertinent example from my ongoing projects is the investigation of population dynamics in freshwater Daphnia species.
-In this endeavor, I closely collaborate with colleagues in the Ecology department, leveraging their profound knowledge of Daphnia behavior.
+In this endeavor, I closely collaborate with colleagues in the Ecology department, leveraging their knowledge of Daphnia.
 This collaboration has honed my skills as an effective statistical consultant in ecological research projects, a competency I look forward to further refine through future research collaborations.
 
 % An important outcome of this line of research is
@@ -55,26 +55,27 @@ Contemporary approaches that have been successfully used for nonlinear, low-dime
 As the dimensionality of the system increases, however, the approximation error of SMC increases exponentially \cite{bengtsson08,snyder08}.
 This necessitates the development of algorithms that can be used to perform inference on high-dimensional nonlinear state-space models.
 Recent progress in this area has been made---including my own research projects \cite{ionides22,wheeler24}---yet several open problems remain.
-Furthermore, existing plug-and-play algorithms used to model these systems are computationally expensive, making any improvements in computational speed a desireable outcome.
+Furthermore, existing plug-and-play algorithms used to model these systems are computationally expensive, making any improvements in computational speed a desirable outcome.
 % Recent research by my research group have enabled some progress in this area \cite{ionides22}.
 
-One simplifying assumption that can often be made for high-dimensional, nonlinear dynamic systems is approximate independence bewtween measurement units.
+A simplifying assumption that can often be made for high-dimensional, nonlinear dynamic systems is approximate independence between measurement units.
 Data collected from these systems are sometimes called panel or longitudinal data.
-Each time series in the panel may be relatively short, so that inference on an underlying model must combine information across the units.
+Each time-series in the panel may be relatively short, so that inference on an underlying model must combine information across the units.
 Differences between units may be of direct inferential interest or may be a nuisance for studying the commonalities.
 One example includes fitting parameters that are both shared across units in the panel and also those that are specific to each unit.
 Current state-of-the-art plug-and-play algorithms available for fitting models of this type of model treat panel state-space models similar to their lower-dimensional equivalents \cite{breto20}, and can therefore still suffer from particle depletion \cite{snyder08}, resulting in the need for expensive numerical calculations.
 
 One of my current research projects aims to reduce the computational burden associated with fitting state-space models to panel data.
-An algortihm I have designed, called the block panel iterated filter (BPIF), does this by accounting for the indepdenence between the likelihood of a given unit in a panel and the unit-specific parameters of other units.
-While the theory for this algorithm is still being developed, it has proven to be an improvement over existing approaches on simulated data and in some practical examples that have been attempted by undergraduate students I have mentored \cite{yang23,sun24}.
+An algorithm I have designed, called the block panel iterated filter (BPIF), does this by accounting for the independence between the likelihood of a given unit in a panel and the unit-specific parameters of other units.
+While the theory for this algorithm is still being developed, it has demonstrated to be an improvement over existing approaches on simulated data and on examples that have been attempted by undergraduate students I have mentored \cite{yang23,sun24}.
 
-One weakness of maximum likelihood estimation is that estimated parameters may not make sense in the context of the model and data in question \cite{lecam90}.
+A weakness of maximum likelihood estimation is that estimated parameters may not make sense in the context of the model and data in question \cite{lecam90}.
 For mechanistic models, this is particularly troublesome because estimated parameters should provide a quantitative description of the data while retaining a meaningful mechanistic interpretation \cite{wheeler24}.
-In high dimensional systems, the chance of finding parameters that maximize the likelihood in inplausible regions of the parameter space increases \cite{li24}.
+In high dimensional systems, the chance of finding parameters that maximize the likelihood in implausible regions of the parameter space increases \cite{li24}.
 For this reason I plan on extending existing iterated filtering algorithms \cite{ionides15,ionides22} to enable the maximization of penalized likelihood \cite{cole13}, which helps address issues of parameter instability that arise in likelihood maximization.
 Additionally, penalized likelihood may enable the estimation of random effects in high-dimensional state-space models, an open research question.
 
+% Finally, recent advancements in automatically differentiable particle filters (ADPF) by a student that I mentored as an undergraduate student and my research advisory shows promise as an computational improvement over existing methods on low-dimensional systems.
 % \section{State-space modeling of infectious diseases}\label{sec:epi}
 
 % The ongoing global COVID-19 pandemic has sparked interest in the statistical modeling of infectious diseases.
@@ -86,14 +87,14 @@ Additionally, penalized likelihood may enable the estimation of random effects i
 
 State-space models have additional uses beyond the class of mechanistic models that are popular in Ecology.
 Likelihood maximization for auto regressive moving average (ARMA) models, for instance, is traditionally done by reparameterizing the model into an equivalent linear Gaussian state-space form \cite{gardner80, durbin12}.
-% In this case, the state-space model is a convinient approach to fitting a model rather than being of direct interest itself.
+% In this case, the state-space model is a convenient approach to fitting a model rather than being of direct interest itself.
 Despite the wide use of ARMA models across various scientific disciplines, current algorithms for maximum likelihood estimation of ARMA models have weaknesses that are not well known.
-In one of my working papers, I demonstrate how existing optimization strategies for ARMA models often result in parameter estimates corresponding to local---rather than global---maxima of the likelihood surface.
+In one of my working papers, I demonstrate how existing optimization strategies for ARMA models often result in parameter estimates corresponding to local---rather than global---maximum of the likelihood surface.
 To rectify this, I propose a random restart algorithm that frequently results in higher likelihoods than standard alternatives \cite{wheelerARMA}.
 
 While my current research is focused on state-space modeling of dynamic systems, I am interested in many other statistical topics and am open to new research topics and collaborations.
-Some themes common to each of my research interests are transparency, reproducibility and simplicity.
-I believe that many of the challenges faced by various scientific disciplines are a direct result of the poor practice of these three principles.
+Some themes common to each of my research interests are transparency and reproducibility.
+I believe that many of the challenges faced by various scientific disciplines are a direct result of the poor practice of these principles.
 I also believe that statisticians must play a more active role in promoting and executing these principles.
 As such, one of my primary research goals is to positively impact the scientific community by writing papers and developing software that encourage and enable other researchers to incorporate these principles in their own work.
 
@@ -104,11 +105,11 @@ This section briefly describes some of the open-source software packages to whic
 
 \begin{itemize}
     \item \texttt{panelPomp}: This package provides a framework for developing high-dimensional state-space models under the assumption of independence between panel units.
-    This package is publically available on both CRAN and GitHub.
+    This package is publicly available on both CRAN and GitHub.
     While I was not the original creator of the package, I am currently the primary package maintainer and developer.
 
     \item \texttt{arima2}: This package provides useful functions for fitting auto-regressive, integrated, moving-average (ARIMA) models in \texttt{R}. The most important function of this package is the \texttt{arima} function, which fits ARIMA models using a multiple restart algorithm that frequently results in models with higher likelihoods than other alternatives \cite{wheelerARMA}.
-    I am the creator and primary contributor of this package, which is publically available on both CRAN and GitHub.
+    I am the creator and primary contributor of this package, which is publicly available on both CRAN and GitHub.
 
     \item \texttt{pomp} and \texttt{spatPomp}: These are both popular packages that enable inference for mechanistic models. The \texttt{pomp} package in particular is used by thousands of researchers across a variety of disciplines. I am an active contributor to both of these open source projects.
 
