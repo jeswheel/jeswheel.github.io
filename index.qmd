@@ -10,7 +10,6 @@ about:
       href: https://github.com/jeswheel
       icon: "github"
   image-width: 10em
-css: custom.scss
 ---
 
 I am a 5th year PhD student in the Statistics Department at the University of Michigan.
@@ -43,11 +42,6 @@ selected_papers <- papers %>% filter(!is.na(PRIORITY) & PRIORITY == 1)
 # df2bib(selected_papers, file = 'texDocs/selectedPapers.bib')
 ```
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.2in}
-\setlength{\parskip}{8pt}
-\indent
 
 ```{r echo=FALSE, results='asis'}
 out <- "<div class=\"myrefs\">\n" 
