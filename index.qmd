@@ -13,12 +13,12 @@ about:
 css: custom.scss
 ---
 
-I am a 4th year PhD student in the Statistics Department at the University of Michigan.
-I research likelihood based methods for partially observed Markov process models.
-I primarily work on methodology, software and applications of these models to infectious disease outbreaks, but I am also currently working on developing theoretical properties of some algorithms that I have previously helped develop. 
-<!-- We are currently working on extending the state-of-the art in this field by expanding the scope of these models to the case when data are collected on a moderate sized spatial network. -->
-<!-- One of my goals, for example, would be to increase the set of tools available to researchers who might want to gain an understanding of how recorded cases of an infectious disease in one spatial region might be related to those in neighboring region.  -->
-<!-- My thesis advisor is [Edward Ionides](https://ionides.github.io/).  -->
+I am a 5th year PhD student in the Statistics Department at the University of Michigan.
+I research likelihood based methods for partially observed Markov process (POMP) models.
+I primarily work on theory, methodology, and software related to these models. 
+My application area has primarily been infectious disease outbreaks, but I am also interested in a variety of other topics and application areas. 
+
+My thesis advisor is [Edward Ionides](https://ionides.github.io/).
 
 ---
 
