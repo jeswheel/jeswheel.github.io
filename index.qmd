@@ -15,7 +15,7 @@ about:
 I am a 5th year PhD student in the Statistics Department at the University of Michigan.
 I research likelihood based methods for partially observed Markov process (POMP) models.
 I primarily work on theory, methodology, and software related to these models. 
-My application area has primarily been infectious disease outbreaks, but I am also interested in a variety of other topics and application areas. 
+My application area has been infectious disease outbreaks, but I am also interested in a variety of other topics and application areas. 
 
 My thesis advisor is [Edward Ionides](https://ionides.github.io/).
 
