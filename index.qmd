@@ -88,11 +88,11 @@ cat(out)
 ## Software 
 
 - [arima2](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
-- [panelPomp](https://jeswheel.github.io/panelPomp): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am not the creator of this package, but I am one of the primary contributors and maintainers of this package. 
+- [panelPomp](https://panelPomp-org.github.io): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am the current maintainer of this package, and creator and admin for the corresponding [GitHub organization](https://github.com/panelPomp-org). 
 
 ---
 
 This website was created using Quarto. 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+To learn more about Quarto websites, see [slides I created](https://docs.google.com/presentation/d/1unAZ49f4PR11giPqA9fSSFcaBwZS_3onK71F3bGUkvQ/edit?usp=sharing) for a Statistics Student Seminar at the University of Michigan, 2024.
 
 
