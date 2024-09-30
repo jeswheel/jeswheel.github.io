@@ -11,7 +11,9 @@ website:
         text: CV
       - href: texDocs/researchStatement.pdf
         text: Research Statement
-      - href: panelPomp
+      - href: texDocs/DEIstatement.pdf
+        text: Diversity Statement
+      - href: https://panelpomp-org.github.io
         text: PanelPomp
       # - about.qmd
 

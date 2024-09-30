@@ -1,6 +1,6 @@
 TEXDOCS:= {cv,researchStatement}
 
-build: index.qmd about.qmd styles.css texDocs/cv.tex texDocs/researchStatement.tex texDocs/myWorks.bib
+build: index.qmd about.qmd styles.css texDocs/cv.tex texDocs/researchStatement.tex texDocs/myWorks.bib texDocs/DEIstatement.tex
 	if [ -a texDocs/cv.pdf]; then rm texDocs/cv.pdf; fi
 	if [ -a texDocs/researchStatement.pdf]; then rm texDocs/researchStatement.pdf; fi
 	$(MAKE) texdocs
@@ -30,3 +30,7 @@ texDocs/cv.pdf: texDocs/cv.tex
 texDocs/researchStatement.pdf: texDocs/myWorks.bib texDocs/researchStatement.tex
 	(cd texDocs; pdflatex researchStatement; bibtex researchStatement; pdflatex researchStatement; pdflatex researchStatement)
 	rm -f texDocs/researchStatement.aux texDocs/researchStatement.log texDocs/researchStatement.bbl texDocs/researchStatement.blg texDocs/researchStatement.out
+
+texDocs/DEIstatement.pdf: texDocs/myWorks.bib texDocs/DEIstatement.tex 
+	(cd texDocs; pdflatex DEIstatement.tex; bibtex DEIstatement.tex; pdflatex DEIstatement.tex; pdflatex DEIstatement.tex)
+	rm -f texDocs/DEIstatement.aux texDocs/DEIstatement.log texDocs/DEIstatement.bbl texDocs/DEIstatement.blg texDocs/DEIstatement.out
