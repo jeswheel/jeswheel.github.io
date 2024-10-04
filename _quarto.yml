@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - Stat5100.zip
 
 website:
   title: "Jesse Wheeler"
