@@ -1,7 +1,11 @@
 project:
   type: website
   resources:
-    - Stat5100.zip
+    - Stat5100.Rmd
+  render:
+    - "*.qmd"
+    - "!Stats5100.Rmd"
+
 
 website:
   title: "Jesse Wheeler"
