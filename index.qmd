@@ -1,0 +1,100 @@
+---
+title: "Jesse Wheeler"
+image: portait.jpeg
+about: 
+  template: solana 
+  links: 
+    - text: ORCiD
+      href: https://orcid.org/0000-0003-3941-3884
+    - text: GitHub
+      href: https://github.com/jeswheel
+      icon: "github"
+  image-width: 10em
+---
+
+I am a 5th year PhD student in the Statistics Department at the University of Michigan.
+I research likelihood based methods for partially observed Markov process (POMP) models.
+I primarily work on theory, methodology, and software related to these models. 
+My application area has been modeling infectious disease outbreaks, but I am also interested in a variety of other topics and application areas. 
+
+My thesis advisor is [Edward Ionides](https://ionides.github.io/).
+
+[USU Stat 5100 Lecture Material](https://raw.githubusercontent.com/jeswheel/jeswheel.github.io/refs/heads/main/USU.Rmd)
+
+---
+
+## Education
+
+University of Michigan | Ann Arbor, MI
+PhD in Statistics | August 2020 - Current
+
+Utah State University | Logan, UT
+B.S. in Mathematics and Statistics | August 2016 - May 2020
+
+---
+
+## Selected Papers
+
+```{r echo=FALSE, message=FALSE, include=FALSE, warning=FALSE}
+library(bib2df)
+library(tidyverse)
+papers <- bib2df('texDocs/myWorks.bib')
+selected_papers <- papers %>% filter(!is.na(PRIORITY) & PRIORITY == 1)
+# selected_papers$BIBTEXKEY <- paste0("sp", 1:nrow(selected_papers))
+# df2bib(selected_papers, file = 'texDocs/selectedPapers.bib')
+```
+
+
+```{r echo=FALSE, results='asis'}
+out <- "<div class=\"myrefs\">\n" 
+for (i in 1:nrow(selected_papers)) {
+  authors <- unlist(selected_papers[[i, 'AUTHOR']])
+  authors_split <- strsplit(authors, ",")
+  
+  lasts <- unlist(lapply(authors_split, function(x) x[1]))
+  firsts <- gsub("^\\s", "", unlist(lapply(authors_split, function(x) x[2])))
+  first_initials <- str_extract_all(firsts, "\\b(\\w)")
+  first_initials <- unlist(lapply(first_initials, function(x) paste0(paste0(x, collapse = ". "), ".")))
+  
+  if (length(lasts) >= 6) {
+    out_name <- paste0(lasts[1], ", ", first_initials[1], ", et al.")
+  } else {
+    out_name <- paste(lasts, first_initials, sep = ', ', collapse = ', ')
+  }
+  
+  Working <- selected_papers[[i, "WORKING"]]
+  Year <- gsub("noop\\{\\d+\\}", "", selected_papers[[i, 'YEAR']])
+  Year <- gsub("[[:alpha:]]|[[:punct:]]|\\s", "", Year)
+  
+  entry <- paste0(
+    "<p>", out_name, " ", 
+    ifelse(!is.na(Working), paste0("**", Working, "**. "), ""),
+    Year, 
+    ". \"",
+    gsub("\\{|\\}", "", selected_papers[[i, "TITLE"]]), "\". ",
+    "*", 
+    gsub("noop\\{\\d+\\}", "", selected_papers[[i, "JOURNAL"]]),
+    "*.", 
+    ifelse(is.na(selected_papers[[i, "DOI"]]), "</p>", paste0(" ", selected_papers[[i, "DOI"]], ".</p>"))
+  )
+  
+  out <- paste0(
+    out, 
+    entry, "\n"
+    )
+}
+out <- paste0(out, "</div>")
+cat(out)
+```
+
+## Software 
+
+- [arima2](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
+- [panelPomp](https://panelPomp-org.github.io): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am the current maintainer of this package, and creator and admin for the corresponding [GitHub organization](https://github.com/panelPomp-org). 
+
+---
+
+This website was created using Quarto. 
+To learn more about Quarto websites, see [slides I created](https://docs.google.com/presentation/d/1unAZ49f4PR11giPqA9fSSFcaBwZS_3onK71F3bGUkvQ/edit?usp=sharing) for a Statistics Student Seminar at the University of Michigan, 2024.
+
+

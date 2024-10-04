@@ -1,0 +1,33 @@
+project:
+  type: website
+  render:
+    - "!USU.Rmd"
+  resources:
+    - USU.Rmd
+
+website:
+  title: "Jesse Wheeler"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: texDocs/cv.pdf
+        text: CV
+      - href: texDocs/researchStatement.pdf
+        text: Research Statement
+      - href: texDocs/DEIstatement.pdf
+        text: Diversity Statement
+      - href: https://panelpomp-org.github.io
+        text: PanelPomp
+      # - about.qmd
+
+format:
+  html:
+    theme:
+      dark: darkly
+      light: flatly
+    css: styles.css
+    toc: true
+
+
+

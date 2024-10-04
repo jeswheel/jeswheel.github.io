@@ -1,0 +1,9 @@
+.Rproj.user/*
+/.quarto/
+/_site/
+.Rproj.user
+/docs/
+.DS_Store
+texDocs/*.log
+texDocs/*.synctex.gz
+texDocs/*.bbl
