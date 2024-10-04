@@ -19,7 +19,7 @@ My application area has been modeling infectious disease outbreaks, but I am als
 
 My thesis advisor is [Edward Ionides](https://ionides.github.io/).
 
-[USU Stat 5100 Lecture Material](Stat5100.Rmd)
+[USU Stat 5100 Lecture Material](Stat5100_1.Rmd)
 
 ---
 

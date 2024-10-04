@@ -1,9 +1,9 @@
 project:
   type: website
   render:
-    - "!Stat5100.Rmd"
+    - "!Stat5100_1.Rmd"
   resources:
-    - Stat5100.Rmd
+    - Stat5100_1.Rmd
 
 website:
   title: "Jesse Wheeler"
