@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Jesse Wheeler",
@@ -33,5 +26,12 @@
     "title": "Jesse Wheeler",
     "section": "Software",
     "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. I am the current maintainer of this package, and creator and admin for the corresponding GitHub organization.\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   }
 ]
