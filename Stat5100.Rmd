@@ -156,7 +156,7 @@ ggplot(df_poly, aes(x = x, y = y)) +
 If I don't know what this relationship is, I might consider fitting a polynomial regression model: 
 
 $$
-y_i = \beta_0 + \beta_1 x_1 + \beta_2 x_2^2 + \ldots + \beta_px_p^p + \epsilon_p
+y_i = \beta_0 + \beta_1 x_1 + \beta_2 x_2^2 + \ldots + \beta_px_p^p + \epsilon_i
 $$
 The question remains: how many variables should I fit to the data?
 
