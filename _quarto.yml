@@ -17,6 +17,8 @@ website:
         text: CV
       - href: texDocs/researchStatement.pdf
         text: Research Statement
+      - href: texDocs/teachingStatement.pdf
+        text: Teaching Statement
       - href: texDocs/DEIstatement.pdf
         text: Diversity Statement
       - href: https://panelpomp-org.github.io
