@@ -15,14 +15,22 @@ website:
         text: Home
       - href: texDocs/cv.pdf
         text: CV
-      - href: texDocs/researchStatement.pdf
-        text: Research Statement
-      - href: texDocs/teachingStatement.pdf
-        text: Teaching Statement
-      - href: texDocs/DEIstatement.pdf
-        text: Diversity Statement
-      - href: https://panelpomp-org.github.io
-        text: PanelPomp
+      - text: Professional Statements
+        menu:
+          - text: Research Statement
+            href: texDocs/researchStatement.pdf
+          - text: Teaching Statement
+            href: texDocs/teachingStatement.pdf
+          - text: Diversity Statement
+            href: texDocs/DEIstatement.pdf
+      - text: Software
+        menu:
+          - text: panelPomp (R)
+            href: https://panelpomp-org.github.io
+          - text: pypomp (Python)
+            href: https://github.com/pypomp
+          - text: arima2 (R)
+            href: https://github.com/jeswheel/arima2
       # - about.qmd
 
 format:
