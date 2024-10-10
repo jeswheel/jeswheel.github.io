@@ -11,8 +11,8 @@ website:
   title: "Jesse Wheeler"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      # - href: index.qmd
+      #   text: Home
       - href: texDocs/cv.pdf
         text: CV
       - text: Professional Statements
