@@ -45,7 +45,7 @@ Applying state-space models to data requires close collaboration with experts fr
 For example, conducting a statistical analysis of an infectious disease outbreak relies heavily on expert opinion regarding the specific disease \cite{wheeler24}.
 A pertinent example from my ongoing projects is the investigation of population dynamics in freshwater \emph{Daphnia} species.
 In this endeavor, I closely collaborate with colleagues in the Ecology and Evolutionary Biology department, leveraging their knowledge of \emph{Daphnia}.
-This collaboration has honed my skills as an effective statistical collaborator in ecological research projects, a competency I look forward to further refine through future research collaborations.
+This collaboration has honed my skills as an effective statistical collaborator, a competency I look forward to further refine in future research projects.
 
 % An important outcome of this line of research is
 % State-space models are particularly useful in studying population Ecology.
@@ -66,7 +66,7 @@ Examples of this type include controlled ecological experiments, or systems wher
 Each time-series in the panel may be relatively short, so that inference on an underlying model must combine information across the units.
 Differences between units may be of direct inferential interest or may be a nuisance for studying the commonalities.
 One example includes fitting parameters that are both shared across units in the panel and also those that are specific to each unit.
-Current state-of-the-art plug-and-play algorithms available for fitting models of this type of model treat panel state-space models similar to their lower-dimensional equivalents \cite{breto20}, and can therefore still suffer from particle depletion \cite{snyder08}, resulting in the need for expensive numerical calculations.
+Current state-of-the-art plug-and-play algorithms available for fitting models of this type treat panel state-space models similar to their lower-dimensional equivalents \cite{breto20}, and can therefore still suffer from particle depletion \cite{snyder08}, resulting in the need for expensive numerical calculations.
 
 One of my current research projects aims to reduce the computational burden associated with fitting state-space models to panel data.
 An algorithm I have designed, called the marginalized panel iterated filter (MPIF), does this by accounting for the independence between the likelihood of a given unit in a panel and the unit-specific parameters of other units.
@@ -99,6 +99,8 @@ In one of my working papers, I demonstrate how existing optimization strategies 
 In other optimization contexts, the issue of converging to a local solution is addressed through multiple runs of the algorithm with different starting values.
 However, this approach is not readily applicable to ARMA models due to the intricate geometry of their likelihood surfaces \cite{ripley2002}.
 To rectify this, I propose a random restart algorithm that accounts for the geometry of the likelihood surface and can frequently result in higher likelihoods than current standards \cite{wheelerARMA}.
+This included the creation of a now-popular R package, \texttt{arima2}.
+I believe there are various potential extensions of this package and the implemented methodology that are particularly suitable for introductory research projects at the undergraduate and master's levels.
 
 \section{Scientific applications}
 
@@ -106,8 +108,8 @@ I am also interested in a variety of applications.
 Currently, most of my applied research has been in the modeling of infectious diseases, though I am interested in developing collaborations in other scientific disciplines.
 In future work, I plan to apply recent advancements in automatically differentiable particle filters \cite{tan24} to investigate how machine learning tools can enhance mechanistic models for nonlinear dynamic systems.
 One example is examining how changes in human behavior may affect disease dynamics.
-Although similar ideas have been explored recently \cite{dandekar20,kim21}, these approaches involve fitting an ODE model to cummulative case counts using summary statistics, an approach that has elsewhere been found to be problematic \cite{king15}.
-The \texttt{pypomp} sofware project, currently under development (\url{https://github.com/pypomp}), may enable fitting scientificly motivated machine learning models via maximum likelihood.
+Although similar ideas have been explored recently \cite{dandekar20,kim21}, these approaches involve fitting an ODE model to cumulative case counts using summary statistics, an approach that has elsewhere been found to be problematic \cite{king15}.
+The \texttt{pypomp} software project, currently under development (\url{https://github.com/pypomp}), may enable fitting scientifically motivated machine learning models via maximum likelihood.
 This could lean to novel insights into an infectious disease system.
 Similarly, this approach has the potential to yield new understanding in other nonlinear dynamic systems by incorporating the scientific benefits of mechanistic models \cite{baker18} with the statistical efficiency of likelihood-based inference and the flexibility of neural networks.
 
