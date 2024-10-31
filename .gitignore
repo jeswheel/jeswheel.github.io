@@ -7,3 +7,4 @@
 texDocs/*.log
 texDocs/*.synctex.gz
 texDocs/*.bbl
+texDocs/jointStatement.pdf
