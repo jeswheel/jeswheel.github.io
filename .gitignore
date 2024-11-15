@@ -8,3 +8,11 @@ texDocs/*.log
 texDocs/*.synctex.gz
 texDocs/*.bbl
 texDocs/jointStatement.pdf
+texDocs/DEIstatementCSM.pdf
+texDocs/DEIstatementCSM.tex
+texDocs/researchStatementCSM.pdf
+texDocs/researchStatementCSM.tex
+texDocs/researchStatementTemp.tex
+texDocs/teachingStatementCSM.pdf
+texDocs/teachingStatementCSM.tex
+
