@@ -30,12 +30,18 @@
 \noindent A modern approach to modeling time series data is the use of state-space (or mechanistic) models \cite{durbin12}.
 These models require the proposal of mathematical equations that describe how unobservable states of the system evolve over time and how measurements of the system variables are obtained.
 State-space models are appealing because they allow researchers to incorporate mechanisms that reflect our current scientific understanding of the system in question.
-This capability enables researchers to estimate the effects of potential interventions on the system, provides a framework for statistical testing of our current understanding against alternative explanations, and facilitates inference on unobservable variables that may be of scientific interest.
+This capability enables the estimation of the impacts of interventions on the system, provides a framework for statistical testing of our current understanding against alternative explanations, and facilitates inference on unobservable variables that may be of scientific interest.
 
-Despite the utility of these models, statistical inference of a dynamic system using state-space models remains a challenging task \cite{auger16}.
+Despite the utility of these models, statistical inference of dynamic systems via state-space models remains a challenging task \cite{auger16}.
 The primary goal of my current research is to expand the current state-of-the-art for state-space modeling.
 In particular, I develop methodology, theory, and software for likelihood based inference of state-space models with the {\it plug-and-play} property, which is that one only needs the ability to simulate from the model in order to perform inference \cite{breto09}.
-Algorithms with the plug-and-play property enable researchers to fit models that align with their scientific objectives instead of being limited to those that are statistically convenient \cite{wheeler24}.
+Algorithms with the plug-and-play property enable researchers to fit models that align with their scientific objectives instead of being limited to those that are statistically convenient.
+This line of research leads to many applications areas that involve population dynamics, such as the modeling of infectious diseases \cite{wheeler24} or other ecological systems \cite{yang24}.
+
+A idea that is central to my research interests is the importance good statistical practices, such as transparency, reproducibility, and effective communication.
+I believe statisticians have a crucial role in advocating for and implementing these principles. Therefore, one of my primary research goals is to make a positive impact on the scientific community by authoring papers and developing software that facilitate and promote these best practices.
+This commitment has led me to develop open-source software aimed at improving statistical modeling and inference.
+Such software is essential for the effective dissemination of robust statistical and scientific research.
 
 % An important outcome of this line of research is
 % State-space models are particularly useful in studying population Ecology.
@@ -46,14 +52,14 @@ The nonlinear, stochastic nature of many dynamic systems of scientific interest 
 Contemporary approaches that have been successfully used for nonlinear, low-dimensional systems are based on sequential Monte Carlo (SMC) techniques \cite{ionides06,andrieu10,ionides15}.
 As the dimensionality of the system increases, however, the approximation error of SMC increases exponentially \cite{bengtsson08,snyder08}.
 This necessitates the development of algorithms that can be used to perform inference on high-dimensional nonlinear state-space models.
-Recent progress in this area has been made---including my own research projects \cite{ionides22,wheeler24}---yet several open problems remain.
+Recent progress in this area has been made---including my own research projects \cite{ionides22,wheeler24,panelpomp}---yet several open problems remain.
 Furthermore, existing plug-and-play algorithms used to model these systems are computationally expensive, making any improvements in computational speed a desirable outcome.
 % Recent research by my research group have enabled some progress in this area \cite{ionides22}.
 
 A simplifying assumption that can often be made for high-dimensional, nonlinear dynamic systems is approximate independence between measurement units.
 Data collected from these systems are sometimes called panel or longitudinal data.
 Examples of this type include controlled ecological experiments, or systems where we are interested in modeling within-host dynamics.
-Each time-series in the panel may be relatively short, so that inference on an underlying model must combine information across the units.
+Each time series in the panel may be relatively short, so that inference on an underlying model must combine information across the units.
 Differences between units may be of direct interest or may be a nuisance for studying the commonalities.
 One example includes fitting parameters that are both shared across units in the panel and also those that are specific to each unit.
 Current state-of-the-art plug-and-play algorithms available for fitting models of this type treat panel state-space models similar to their lower-dimensional equivalents \cite{breto20}, and can therefore still suffer from particle depletion \cite{snyder08}, making these approaches less applicable in high dimensions.
@@ -91,7 +97,7 @@ In one of my working papers, I demonstrate how existing optimization strategies 
 In other optimization contexts, the issue of converging to a local solution is addressed through multiple runs of the algorithm with different starting values.
 However, this approach is not readily applicable to ARMA models due to the intricate geometry of their likelihood surfaces \cite{ripley2002}.
 To rectify this, I propose a random restart algorithm that accounts for the geometry of the likelihood surface and can frequently result in higher likelihoods than current standards \cite{wheelerARMA}.
-This included the creation of a now-popular R package, \texttt{arima2}.
+This included the creation of a now-popular R package, \texttt{arima2}, which is available on CRAN.
 These results represent a significant advance of statistical practice given the importance of ARMA models in both scientific and industrial applications.
 I believe there are various potential extensions of this package and the implemented methodology that are particularly suitable for introductory research projects at the undergraduate and master's levels.
 
@@ -110,31 +116,6 @@ Although similar ideas have been explored recently \cite{dandekar20,kim21}, thes
 The \texttt{pypomp} software project, currently under development (\url{https://github.com/pypomp}), may enable fitting scientifically motivated machine learning models via maximum likelihood.
 This could lean to novel insights into an infectious disease system.
 Similarly, this approach has the potential to yield new understanding in other nonlinear dynamic systems by incorporating the scientific benefits of mechanistic models \cite{baker18} with the statistical efficiency of likelihood-based inference and the flexibility of neural networks.
-
-\section{Software}\label{sec:software}
-
-% While my current research is focused on state-space modeling of dynamic systems, I am also interested in a wide array of statistical topics and open to new research directions and collaborations.
-Central to my research interests is the emphasis on good statistical practices, such as transparency, reproducibility, and effective communication.
-Statisticians must take a proactive role in promoting and implementing these principles.
-Consequently, one of my primary research goals is to positively impact the scientific community by writing papers and developing software that facilitate and promote good statistical practices.
-This commitment has guided me in the development of open-source software related to statistical modeling and inference.
-This section briefly describes some of the software projects I am currently involved in.
-
-\begin{itemize}
-
-      \item \texttt{arima2}: This package provides a novel computational approach for fitting ARIMA models in \texttt{R}. The most important function of this package is the \texttt{arima} function, which fits ARIMA models using a multiple restart algorithm that frequently results in models with higher likelihoods than other alternatives \cite{wheelerARMA}.
-    I am the creator and primary contributor of this package, which is publicly available on both CRAN and GitHub.
-
-    \item \texttt{panelPomp}: This package provides a framework for developing high-dimensional state-space models under the assumption of independence between panel units.
-    This package is publicly available on both CRAN and GitHub.
-    After joining the development team for panelPomp in May, 2023, I became the most active contributor and am now the package maintainer.
-    Together with collaborators, I wrote a tutorial demonstrating a typical use case of this package that is available on ArXiv \cite{breto24}.
-
-    \item \texttt{pypomp}: This is a new Python project with the goal of providing a framework for developing arbitrary POMP models in Python. The code currently focuses on supporting the automatic differentiation methodology explored by Tan, K., Ionides, E. L. and Hooker, G. \cite{tan24}. I am one of the core developers on this project.
-
-    \item \texttt{pomp} and \texttt{spatPomp}: These are both popular packages that enable inference for mechanistic models. The \texttt{pomp} package in particular is used by thousands of researchers across a variety of disciplines. I am an active contributor to both of these open source projects.
-
-\end{itemize}
 
 \bibliography{myWorks.bib,otherWorks.bib}
 \bibliographystyle{ieeetr}
