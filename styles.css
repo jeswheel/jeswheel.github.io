@@ -3,3 +3,30 @@ div.myrefs {
   padding-left: 22px;
   text-indent: -22px;
 }
+
+.navbar {
+  background-color: ;
+}
+
+nav[data-bs-theme="dark"] {
+  background-color: #f47920;
+  color: #333333
+}
+
+/* Targeting navbar brand text */
+nav[data-bs-theme="dark"] .navbar-brand,
+nav[data-bs-theme="dark"] .navbar-brand .navbar-title {
+  color: #333333 !important;
+}
+
+/* Targeting main navigation link text */
+nav[data-bs-theme="dark"] .navbar-nav .nav-link,
+nav[data-bs-theme="dark"] .menu-text {
+  color: #333333 !important;
+}
+
+/* Targeting dropdown items */
+nav[data-bs-theme="dark"] .dropdown-menu .dropdown-item,
+nav[data-bs-theme="dark"] .dropdown-text {
+  color: #333333 !important;
+}

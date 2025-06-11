@@ -37,7 +37,7 @@ format:
   html:
     theme:
       dark: darkly
-      light: flatly
+      light: united
     css: styles.css
     toc: true
 

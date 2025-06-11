@@ -10,21 +10,32 @@ about:
       href: https://github.com/jeswheel
       icon: "github"
   image-width: 10em
+contact:
+  - text: Email
+    href: mailto:your.email@isu.edu
+  - text: Office Location
+    href: https://goo.gl/maps/your-office-location
 ---
 
-I am a 5th year PhD student in the Statistics Department at the University of Michigan.
-I research likelihood based methods for partially observed Markov process (POMP) models.
-I primarily work on theory, methodology, and software related to these models. 
-My application area has been modeling infectious disease outbreaks, but I am also interested in a variety of other topics and application areas. 
+- **Email**: jessewheeler@isu.edu
 
-My thesis advisor is [Edward Ionides](https://ionides.github.io/).
+## About Me
+
+I am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University. I earned my Ph.D. in Statistics from the University of Michigan in 2025, under the mentorship of [Edward Ionides](https://ionides.github.io/).
+
+My research focuses on time series analysis through likelihood-based inference algorithms for state space models. 
+I work at the intersection of methodology, applications, and software development related to these models. 
+The unifying theme of my work in statistics and computing is to empower researchers to fit models of scientific interest, rather than being limited to models that are mathematically convenient.
+While my primary application area has been modeling infectious disease outbreaks, I am also interested in various other topics and applications, including ecology, fisheries, and agriculture.
+
+If you are interested in learning more about my research or are interested in collaborating, do not hesitate to reach out to me via email (jessewheeler@isu.edu).
 
 ---
 
 ## Education
 
 University of Michigan | Ann Arbor, MI
-PhD in Statistics | August 2020 - Current
+PhD in Statistics | August 2020 - May 2025
 
 Utah State University | Logan, UT
 B.S. in Mathematics and Statistics | August 2016 - May 2020
@@ -88,7 +99,7 @@ cat(out)
 ## Software 
 
 - [arima2](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
-- [panelPomp](https://panelPomp-org.github.io): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). I am the current maintainer of this package, and creator and admin for the corresponding [GitHub organization](https://github.com/panelPomp-org). 
+- [panelPomp](https://panelPomp-org.github.io): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). As associated software paper was recently accepted at The R Journal (). 
 
 ---
 
