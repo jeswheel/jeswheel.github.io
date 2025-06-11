@@ -36,8 +36,8 @@ website:
 format:
   html:
     theme:
-      dark: darkly
       light: united
+      dark: darkly
     css: styles.css
     toc: true
 
