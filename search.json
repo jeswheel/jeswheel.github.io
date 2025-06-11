@@ -4,28 +4,35 @@
     "href": "index.html",
     "title": "Jesse Wheeler",
     "section": "",
-    "text": "I am a 5th year PhD student in the Statistics Department at the University of Michigan. I research likelihood based methods for partially observed Markov process (POMP) models. I primarily work on theory, methodology, and software related to these models. My application area has been modeling infectious disease outbreaks, but I am also interested in a variety of other topics and application areas.\nMy thesis advisor is Edward Ionides."
+    "text": "Email: jessewheeler@isu.edu"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Jesse Wheeler",
+    "section": "About Me",
+    "text": "About Me\nI am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University. I earned my Ph.D. in Statistics from the University of Michigan in 2025, under the mentorship of Edward Ionides.\nMy research focuses on time series analysis through likelihood-based inference algorithms for state space models. I work at the intersection of methodology, applications, and software development related to these models. The unifying theme of my work in statistics and computing is to empower researchers to fit models of scientific interest, rather than being limited to models that are mathematically convenient. While my primary application area has been modeling infectious disease outbreaks, I am also interested in various other topics and applications, including ecology, fisheries, and agriculture.\nIf you are interested in learning more about my research or are interested in collaborating, do not hesitate to reach out to me via email (jessewheeler@isu.edu)."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Jesse Wheeler",
     "section": "Education",
-    "text": "Education\nUniversity of Michigan | Ann Arbor, MI PhD in Statistics | August 2020 - Current\nUtah State University | Logan, UT B.S. in Mathematics and Statistics | August 2016 - May 2020"
+    "text": "Education\nUniversity of Michigan | Ann Arbor, MI PhD in Statistics | August 2020 - May 2025\nUtah State University | Logan, UT B.S. in Mathematics and Statistics | August 2016 - May 2020"
   },
   {
     "objectID": "index.html#selected-papers",
     "href": "index.html#selected-papers",
     "title": "Jesse Wheeler",
     "section": "Selected Papers",
-    "text": "Selected Papers\n\n\nWheeler, J., et al. 2024. “Informing policy via dynamic models: Cholera in Haiti”. PLOS Computational Biology.\n\n\nWagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States”. Journal of Structural Engineering.\n\n\nWheeler, J., Ionides, E. L. 2023. “Likelihood Based Inference of ARMA Models”. ArXiv preprint. arXiv.2310.01198.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2024. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica.\n\n\nWheeler, J., Bean, B., Maguire, M. 2022. “Creating a universal depth-to-load conversion technique for the conterminous United States using random forests”. Journal of Cold Regions Engineering."
+    "text": "Selected Papers\n\n\nWheeler, J., et al. 2024. “Informing policy via dynamic models: Cholera in Haiti”. PLOS Computational Biology.\n\n\nWheeler, J., Ionides, E. L. 2023. “Likelihood Based Inference of ARMA Models”. ArXiv preprint. arXiv.2310.01198.\n\n\nBret{'o}, C., Wheeler, J., King, A. A., Ionides, E. L. 2025. “panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R”. The {R} Journal. arXiv:2410.07934v2.\n\n\nYang, B., Wheeler, J., Ionides, E. L. 2025. “Mechanistic Models for Panel Data: Analysis of Ecological Experiments with Four Interacting Species”. ArXiv preprint. arXiv:2506.04508v2.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2024. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica.\n\n\nWheeler, J., Bean, B., Maguire, M. 2022. “Creating a universal depth-to-load conversion technique for the conterminous United States using random forests”. Journal of Cold Regions Engineering.\n\n\nWagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States”. Journal of Structural Engineering."
   },
   {
     "objectID": "index.html#software",
     "href": "index.html#software",
     "title": "Jesse Wheeler",
     "section": "Software",
-    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. I am the current maintainer of this package, and creator and admin for the corresponding GitHub organization.\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
+    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. As associated software paper was recently accepted at The R Journal ().\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
   },
   {
     "objectID": "about.html",
