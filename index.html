@@ -35,11 +35,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -181,8 +181,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="about-me" class="level2">
 <h2 data-anchor-id="about-me">About Me</h2>
 <p>I am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University. I earned my Ph.D.&nbsp;in Statistics from the University of Michigan in 2025, under the mentorship of <a href="https://ionides.github.io/">Edward Ionides</a>.</p>
-<p>My research focuses on time series analysis through likelihood-based inference algorithms for state space models. I work at the intersection of methodology, applications, and software development related to these models. The unifying theme of my work in statistics and computing is to empower researchers to fit models of scientific interest, rather than being limited to models that are mathematically convenient. While my primary application area has been modeling infectious disease outbreaks, I am also interested in various other topics and applications, including ecology, fisheries, and agriculture.</p>
-<p>If you are interested in learning more about my research or are interested in collaborating, do not hesitate to reach out to me via email (jessewheeler@isu.edu).</p>
+<p>My research focuses on time series analysis through likelihood-based inference algorithms for state space models. I work at the intersection of methodology, applications, and software development related to these models. The unifying theme of my work in statistics and computing is to empower researchers to fit models of scientific interest, rather than being limited to models that are mathematically convenient.</p>
+<p>While my primary application area has been modeling infectious disease outbreaks, I am also interested in various other topics and applications, including ecology, fisheries, and agriculture. If you are interested in learning more about my research or are interested in collaborating, do not hesitate to reach out to me via email (jessewheeler@isu.edu).</p>
 <hr>
 </section>
 <section id="education" class="level2">
@@ -221,7 +221,7 @@ Wagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapp
 <h2 data-anchor-id="software">Software</h2>
 <ul>
 <li><a href="https://github.com/jeswheel/arima2">arima2</a>: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on <a href="https://cran.r-project.org/web/packages/arima2/index.html">CRAN</a>, and there is an associated pre-print paper on <a href="https://arxiv.org/abs/2310.01198">ArXiv</a>.</li>
-<li><a href="https://panelPomp-org.github.io">panelPomp</a>: This R package on <a href="https://cran.r-project.org/web/packages/panelPomp/index.html">CRAN</a> is used for inference of <a href="https://doi.org/10.1080/01621459.2019.1604367">Panel POMP models</a>. As associated software paper was recently accepted at The R Journal ().</li>
+<li><a href="https://panelPomp-org.github.io">panelPomp</a>: This R package on <a href="https://cran.r-project.org/web/packages/panelPomp/index.html">CRAN</a> is used for inference of <a href="https://doi.org/10.1080/01621459.2019.1604367">Panel POMP models</a>. As associated software paper was recently accepted at The R Journal (<a href="https://arxiv.org/abs/2410.07934">ArXiv.2410.07934v2</a>).</li>
 </ul>
 <hr>
 <p>This website was created using Quarto. To learn more about Quarto websites, see <a href="https://docs.google.com/presentation/d/1unAZ49f4PR11giPqA9fSSFcaBwZS_3onK71F3bGUkvQ/edit?usp=sharing">slides I created</a> for a Statistics Student Seminar at the University of Michigan, 2024.</p>
@@ -371,7 +371,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
+  const darkModeDefault = false;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {

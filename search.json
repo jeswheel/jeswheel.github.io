@@ -11,7 +11,7 @@
     "href": "index.html#about-me",
     "title": "Jesse Wheeler",
     "section": "About Me",
-    "text": "About Me\nI am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University. I earned my Ph.D. in Statistics from the University of Michigan in 2025, under the mentorship of Edward Ionides.\nMy research focuses on time series analysis through likelihood-based inference algorithms for state space models. I work at the intersection of methodology, applications, and software development related to these models. The unifying theme of my work in statistics and computing is to empower researchers to fit models of scientific interest, rather than being limited to models that are mathematically convenient. While my primary application area has been modeling infectious disease outbreaks, I am also interested in various other topics and applications, including ecology, fisheries, and agriculture.\nIf you are interested in learning more about my research or are interested in collaborating, do not hesitate to reach out to me via email (jessewheeler@isu.edu)."
+    "text": "About Me\nI am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University. I earned my Ph.D. in Statistics from the University of Michigan in 2025, under the mentorship of Edward Ionides.\nMy research focuses on time series analysis through likelihood-based inference algorithms for state space models. I work at the intersection of methodology, applications, and software development related to these models. The unifying theme of my work in statistics and computing is to empower researchers to fit models of scientific interest, rather than being limited to models that are mathematically convenient.\nWhile my primary application area has been modeling infectious disease outbreaks, I am also interested in various other topics and applications, including ecology, fisheries, and agriculture. If you are interested in learning more about my research or are interested in collaborating, do not hesitate to reach out to me via email (jessewheeler@isu.edu)."
   },
   {
     "objectID": "index.html#education",
@@ -32,7 +32,7 @@
     "href": "index.html#software",
     "title": "Jesse Wheeler",
     "section": "Software",
-    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. As associated software paper was recently accepted at The R Journal ().\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
+    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. As associated software paper was recently accepted at The R Journal (ArXiv.2410.07934v2).\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
   },
   {
     "objectID": "about.html",
