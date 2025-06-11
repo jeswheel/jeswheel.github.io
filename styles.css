@@ -20,8 +20,7 @@ nav[data-bs-theme="dark"] .navbar-brand .navbar-title {
 }
 
 /* Targeting main navigation link text */
-nav[data-bs-theme="dark"] .navbar-nav .nav-link,
-nav[data-bs-theme="dark"] .menu-text {
+nav[data-bs-theme="dark"] .navbar-nav .nav-link {
   color: #333333 !important;
 }
 
