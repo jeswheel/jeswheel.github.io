@@ -34,11 +34,8 @@ If you are interested in learning more about my research or are interested in co
 
 ## Education
 
-University of Michigan | Ann Arbor, MI
-PhD in Statistics | August 2020 - May 2025
-
-Utah State University | Logan, UT
-B.S. in Mathematics and Statistics | August 2016 - May 2020
+PhD in Statistics | University of Michigan | 2020 - 2025
+B.S. in Mathematics and Statistics | Utah State University | 2016 - 2020
 
 ---
 
@@ -71,6 +68,11 @@ for (i in 1:nrow(selected_papers)) {
     out_name <- paste(lasts, first_initials, sep = ', ', collapse = ', ')
   }
   
+  # out_name <- gsub("\\{|\\}", "", out_name)
+  # out_name <- gsub("}", "", out_)
+  # str_replace(out_name, fixed("{\\\\'o}"), "&oacute;")
+  out_name <- gsub("{\\'o}", "&oacute;", out_name, fixed = TRUE)
+  
   Working <- selected_papers[[i, "WORKING"]]
   Year <- gsub("noop\\{\\d+\\}", "", selected_papers[[i, 'YEAR']])
   Year <- gsub("[[:alpha:]]|[[:punct:]]|\\s", "", Year)
@@ -83,7 +85,21 @@ for (i in 1:nrow(selected_papers)) {
     gsub("\\{|\\}", "", selected_papers[[i, "TITLE"]]), "\". ",
     "*", 
     gsub("noop\\{\\d+\\}", "", selected_papers[[i, "JOURNAL"]]),
-    "*.", 
+    ifelse(
+      is.na(selected_papers[[i, 'VOLUME']]) && is.na(selected_papers[[i, "PAGES"]]), 
+      "*.", 
+      paste0("*, ", ifelse(is.na(selected_papers[[i, "VOLUME"]]), "", selected_papers[[i, "VOLUME"]]))
+    ),
+    ifelse(is.na(selected_papers[[i, 'NUMBER']]), "", paste0("(", selected_papers[[i, 'NUMBER']], ")")),
+    ifelse(
+      is.na(selected_papers[[i, 'PAGES']]), 
+      "", 
+      ifelse(
+        str_detect(tolower(selected_papers[[i, 'PAGES']]), "to appear"),
+        paste0(" ", selected_papers[[i, 'PAGES']], "."),
+        paste0(", ", selected_papers[[i, 'PAGES']], ".")
+      )
+    ),
     ifelse(is.na(selected_papers[[i, "DOI"]]), "</p>", paste0(" ", selected_papers[[i, "DOI"]], ".</p>"))
   )
   
