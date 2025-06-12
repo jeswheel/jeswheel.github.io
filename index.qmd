@@ -103,6 +103,8 @@ for (i in 1:nrow(selected_papers)) {
     ifelse(is.na(selected_papers[[i, "DOI"]]), "</p>", paste0(" ", selected_papers[[i, "DOI"]], ".</p>"))
   )
   
+  entry <- gsub('[{}]', '', entry)
+  
   out <- paste0(
     out, 
     entry, "\n"
