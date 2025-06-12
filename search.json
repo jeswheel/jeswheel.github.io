@@ -18,14 +18,14 @@
     "href": "index.html#education",
     "title": "Jesse Wheeler",
     "section": "Education",
-    "text": "Education\nUniversity of Michigan | Ann Arbor, MI PhD in Statistics | August 2020 - May 2025\nUtah State University | Logan, UT B.S. in Mathematics and Statistics | August 2016 - May 2020"
+    "text": "Education\nPhD in Statistics | University of Michigan | 2020 - 2025 B.S. in Mathematics and Statistics | Utah State University | 2016 - 2020"
   },
   {
     "objectID": "index.html#selected-papers",
     "href": "index.html#selected-papers",
     "title": "Jesse Wheeler",
     "section": "Selected Papers",
-    "text": "Selected Papers\n\n\nWheeler, J., et al. 2024. “Informing policy via dynamic models: Cholera in Haiti”. PLOS Computational Biology.\n\n\nWheeler, J., Ionides, E. L. 2023. “Likelihood Based Inference of ARMA Models”. ArXiv preprint. arXiv.2310.01198.\n\n\nBret{'o}, C., Wheeler, J., King, A. A., Ionides, E. L. 2025. “panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R”. The {R} Journal. arXiv:2410.07934v2.\n\n\nYang, B., Wheeler, J., Ionides, E. L. 2025. “Mechanistic Models for Panel Data: Analysis of Ecological Experiments with Four Interacting Species”. ArXiv preprint. arXiv:2506.04508v2.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2024. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica.\n\n\nWheeler, J., Bean, B., Maguire, M. 2022. “Creating a universal depth-to-load conversion technique for the conterminous United States using random forests”. Journal of Cold Regions Engineering.\n\n\nWagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States”. Journal of Structural Engineering."
+    "text": "Selected Papers\n\n\nWheeler, J., et al. 2024. “Informing policy via dynamic models: Cholera in Haiti”. PLOS Computational Biology, 20(4), e1012032.\n\n\nWheeler, J., Ionides, E. L. 2023. “Likelihood Based Inference of ARMA Models”. ArXiv preprint. arXiv.2310.01198.\n\n\nBretó, C., Wheeler, J., King, A. A., Ionides, E. L. 2025. “panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R”. The {R} Journal, to appear. arXiv:2410.07934v2.\n\n\nYang, B., Wheeler, J., Ionides, E. L. 2025. “Mechanistic Models for Panel Data: Analysis of Ecological Experiments with Four Interacting Species”. ArXiv preprint. arXiv:2506.04508v2.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2024. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica, 34, 1241-1262.\n\n\nWheeler, J., Bean, B., Maguire, M. 2022. “Creating a universal depth-to-load conversion technique for the conterminous United States using random forests”. Journal of Cold Regions Engineering, 36(1), 04021019.\n\n\nWagstaff, J., Bean, B., Wheeler, J., Maguire, M., Sun, Y. 2024. “Adaptive Mapping of Design Ground Snow Loads in the Conterminous United States”. Journal of Structural Engineering, 150(1), 04023193."
   },
   {
     "objectID": "index.html#software",
