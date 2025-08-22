@@ -21,7 +21,8 @@ contact:
 
 ## About Me
 
-I am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University. I earned my Ph.D. in Statistics from the University of Michigan in 2025, under the mentorship of [Edward Ionides](https://ionides.github.io/).
+I am an Assistant Professor in the Department of Mathematics and Statistics at Idaho State University.
+I earned my Ph.D. in Statistics from the University of Michigan in 2025, under the mentorship of [Edward Ionides](https://ionides.github.io/).
 
 My research focuses on time series analysis through likelihood-based inference algorithms for state space models. 
 I work at the intersection of methodology, applications, and software development related to these models. 

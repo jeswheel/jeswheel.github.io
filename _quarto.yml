@@ -31,6 +31,12 @@ website:
             href: https://github.com/pypomp
           - text: arima2 (R)
             href: https://github.com/jeswheel/arima2
+      - text: Courses
+        menu:
+          - text: Math 4450 (F25)
+            href: https://jeswheel.github.io/4450_f25
+          - text: Math 3350 (F25)
+            href: https://jeswheel.github.io/3350_f25
       # - about.qmd
 
 format:
