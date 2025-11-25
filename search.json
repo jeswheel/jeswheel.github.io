@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Jesse Wheeler",
     "section": "",
-    "text": "Email: jessewheeler@isu.edu"
+    "text": "Email: jessewheeler@isu.edu\nOffice Location: PS 314C"
   },
   {
     "objectID": "index.html#about-me",
@@ -25,14 +25,14 @@
     "href": "index.html#selected-papers",
     "title": "Jesse Wheeler",
     "section": "Selected Papers",
-    "text": "Selected Papers\n\n\nWheeler, J., et al. 2024. “Informing policy via dynamic models: Cholera in Haiti”. PLOS Computational Biology, 20(4), e1012032.\n\n\nWheeler, J., Ionides, E. L. 2025. “Revisiting inference for ARMA models: Improved fits and superior confidence intervals”. PLOS ONE, 20(10), 1-19. 10.1371/journal.pone.0333993.\n\n\nBretó, C., Wheeler, J., King, A. A., Ionides, E. L. 2025. “panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R”. The R Journal, 17, 180-199. 10.32614/RJ-2025-009.\n\n\nYang, B., Wheeler, J., Ionides, E. L. 2025. “Mechanistic Models for Panel Data: Analysis of Ecological Experiments with Four Interacting Species”. ArXiv preprint. arXiv:2506.04508v2.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2024. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica, 34, 1241-1262.\n\n\nWheeler, J., Bean, B., Maguire, M. 2022. “Creating a universal depth-to-load conversion technique for the conterminous United States using random forests”. Journal of Cold Regions Engineering, 36(1), 04021019."
+    "text": "Selected Papers\n\n\nWheeler, J., Abkemeier, A. J., Ionides, E. L. 2025. “Iterating marginalized Bayes maps for likelihood maximization with application to nonlinear panel models”. ArXiv preprint. arXiv:2511.17438.\n\n\nWheeler, J., et al. 2024. “Informing policy via dynamic models: Cholera in Haiti”. PLOS Computational Biology, 20(4), e1012032.\n\n\nWheeler, J., Ionides, E. L. 2025. “Revisiting inference for ARMA models: Improved fits and superior confidence intervals”. PLOS ONE, 20(10), 1-19. 10.1371/journal.pone.0333993.\n\n\nBretó, C., Wheeler, J., King, A. A., Ionides, E. L. 2025. “panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R”. The R Journal, 17, 180-199. 10.32614/RJ-2025-009.\n\n\nYang, B., Wheeler, J., Ionides, E. L. 2025. “Mechanistic Models for Panel Data: Analysis of Ecological Experiments with Four Interacting Species”. ArXiv preprint. arXiv:2506.04508v2.\n\n\nIonides, E. L., Ning, N., Wheeler, J. 2024. “An Iterated Block Particle Filter for Inference on Coupled Dynamic Systems with Shared and Unit-Specific Parameters”. Statistica Sinica, 34, 1241-1262."
   },
   {
     "objectID": "index.html#software",
     "href": "index.html#software",
     "title": "Jesse Wheeler",
     "section": "Software",
-    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. As associated software paper was recently accepted at The R Journal (ArXiv.2410.07934v2).\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
+    "text": "Software\n\narima2: This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on CRAN, and there is an associated pre-print paper on ArXiv.\npanelPomp: This R package on CRAN is used for inference of Panel POMP models. As associated software paper was recently accepted at The R Journal (10.32614/RJ-2025-009).\n\n\nThis website was created using Quarto. To learn more about Quarto websites, see slides I created for a Statistics Student Seminar at the University of Michigan, 2024."
   },
   {
     "objectID": "about.html",
