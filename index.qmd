@@ -12,12 +12,11 @@ about:
   image-width: 10em
 contact:
   - text: Email
-    href: mailto:your.email@isu.edu
-  - text: Office Location
-    href: https://goo.gl/maps/your-office-location
+    href: jessewheeler@isu.edu
 ---
 
 - **Email**: jessewheeler@isu.edu
+- **Office Location**: PS 314C
 
 ## About Me
 
@@ -119,7 +118,7 @@ cat(out)
 ## Software 
 
 - [arima2](https://github.com/jeswheel/arima2): This library aids maximum likelihood estimation of parameters of ARIMA time series models. The package is currently on [CRAN](https://cran.r-project.org/web/packages/arima2/index.html), and there is an associated pre-print paper on [ArXiv](https://arxiv.org/abs/2310.01198).
-- [panelPomp](https://panelPomp-org.github.io): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). As associated software paper was recently accepted at The R Journal ([ArXiv.2410.07934v2](https://arxiv.org/abs/2410.07934)). 
+- [panelPomp](https://panelPomp-org.github.io): This R package on [CRAN](https://cran.r-project.org/web/packages/panelPomp/index.html) is used for inference of [Panel POMP models](https://doi.org/10.1080/01621459.2019.1604367). As associated software paper was recently accepted at The R Journal ([10.32614/RJ-2025-009](https://doi.org/10.32614/RJ-2025-009)). 
 
 ---
 
