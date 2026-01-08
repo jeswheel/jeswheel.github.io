@@ -33,6 +33,8 @@ website:
             href: https://github.com/jeswheel/arima2
       - text: Courses
         menu:
+          - text: Math 4451 (S26)
+            href: https://jeswheel.github.io/4451_s26
           - text: Math 4450 (F25)
             href: https://jeswheel.github.io/4450_f25
           - text: Math 3350 (F25)
