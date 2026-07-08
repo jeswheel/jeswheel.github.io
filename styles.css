@@ -4,24 +4,25 @@ div.myrefs {
   text-indent: -22px;
 }
 
-.navbar {
-  background-color: ;
+nav[data-bs-theme="light"] {
+  background-color: #0F2439;
+  color: #0F2439;
 }
 
 nav[data-bs-theme="dark"] {
-  background-color: #f47920;
-  color: #333333
+  background-color: #A2AAAD;
+  color: #0F2439;
 }
 
 /* Targeting navbar brand text */
 nav[data-bs-theme="dark"] .navbar-brand,
 nav[data-bs-theme="dark"] .navbar-brand .navbar-title {
-  color: #333333 !important;
+  color: #FFFFFF !important;
 }
 
 /* Targeting main navigation link text */
 nav[data-bs-theme="dark"] .navbar-nav .nav-link {
-  color: #333333 !important;
+  color: #FFFFFF !important;
 }
 
 
