@@ -33,21 +33,19 @@ website:
             href: https://github.com/jeswheel/arima2
       - text: Courses
         menu:
-          - text: Math 4451 (S26)
+          - text: Math 4451 (ISU, S26)
             href: https://jeswheel.github.io/4451_s26
-          - text: Math 4450 (F25)
+          - text: Math 4450 (ISU, F25)
             href: https://jeswheel.github.io/4450_f25
-          - text: Math 3350 (F25)
+          - text: Math 3350 (ISU, F25)
             href: https://jeswheel.github.io/3350_f25
       # - about.qmd
 
 format:
   html:
     theme:
-      dark: darkly
-      light: united
-    css: styles.css
+      light: [united, custom-light.scss]
+      dark: [united, custom-dark.scss]
     toc: true
-
 
 

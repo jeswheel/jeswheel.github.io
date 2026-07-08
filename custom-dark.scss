@@ -1,0 +1,60 @@
+/*-- scss:defaults --*/
+
+// Define University Colors
+$aggie-blue: #0F2439;
+$gray: #A2AAAD;
+$fighting-white: #FFFFFF;
+$black: #000000;
+$secondary-color2: #6B9E85;
+$secondary-color1: #A2AAAD;
+
+// 1. Overall Theme Variables
+$body-bg: $aggie-blue;
+$body-color: $fighting-white;
+
+// 2. Navbar Background
+$navbar-bg: $gray;
+
+// 3. Navbar Foreground (Controls the icons)
+$navbar-fg: $aggie-blue;
+$navbar-light-color: $aggie-blue;
+$navbar-dark-color: $aggie-blue;
+$navbar-light-hover-color: #5b7189;
+
+// Link Colors
+$link-color: $secondary-color1;
+$link-hover-color: $secondary-color2; // Optional: change hover color for better interactivity
+
+
+/*-- scss:rules --*/
+
+/* Custom citation reference styling */
+div.myrefs {
+  padding-left: 22px;
+  text-indent: -22px;
+}
+
+/* Force ALL Navbar text (brand, title, and main navigation links) to Aggie Blue */
+.navbar-brand,
+.navbar-brand .navbar-title,
+.navbar-nav .nav-link {
+  color: $aggie-blue !important;
+}
+
+
+/* =========================================
+   DROPDOWN MENU STYLES
+   ========================================= */
+
+/* 1. Default Dropdown Item Text Color */
+.dropdown-menu .dropdown-item {
+  background-color: $gray !important;
+  color: $aggie-blue !important;
+}
+
+/* 2. Dropdown Item Hover & Focus State */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: $fighting-white !important;
+  color: $aggie-blue !important;
+}
