@@ -21,3 +21,5 @@ texDocs/abbreviatedResume.pdf
 texDocs/abbreviatedResume.tex
 .Rhistory
 .positai
+
+**/*.quarto_ipynb
